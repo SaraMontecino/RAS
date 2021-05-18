@@ -10,6 +10,9 @@ namespace RAS.Models
     {
         //PERGUNTAR DA CHAVE ESTRANGEIRA Produto e Pedido 
 
+        public int? IdProduto { get; set; }
+        public int? IdPedido { get; set; }
+
         [Display(Name = "Quantidade")]
         [Required(ErrorMessage = "Campo quantidade obrigatório")]
         public int Qtd { get; set; }

@@ -56,7 +56,7 @@ namespace RAS.Data
             }
             catch (SqlException sqlerror)
             {
-
+                
             }
             return lista;
         }
