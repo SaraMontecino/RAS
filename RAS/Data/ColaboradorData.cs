@@ -46,10 +46,10 @@ namespace RAS.Data
                 while (reader.Read())
                 {
                     Colaborador colaborador = new Colaborador();
-                    colaborador.remuneracao = (int)reader["Remuneracao"];
-                    colaborador.comissao = (string)reader["Comissao"];
-                    colaborador.login = (string)reader["Login"];
-                    colaborador.senha = (string)reader["Senha"];
+                    colaborador.Remuneracao = (int)reader["Remuneracao"];
+                    colaborador.Comissao = (double)reader["Comissao"];
+                    colaborador.Login = (string)reader["Login"];
+                    colaborador.Senha = (string)reader["Senha"];
                     
                     lista.Add(colaborador);
                 }

@@ -15,8 +15,9 @@ namespace RAS.Data
                 //string de conexão com o Banco de Dados
                 string strConexao = @"Data Source = localhost;
                             Initial Catalog = BDRAS;
-                            Integrated Security = true";    //Autenticação do Windows
-                                                            //User Id=sa; Password=dba;     //Autenticação SQL Server
+                            Integrated Security = true;    
+                            User Id=sa; 
+                            Password=dba";     
 
                 connectionDB = new SqlConnection(strConexao);
 
