@@ -16,8 +16,9 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
             
             cmd.Connection = base.connectionDB;
-            
-            cmd.CommandText = @"Insert into consumidores Values(@cashback, @faixa_etaria)";
+
+            // tenho que passar pessoa_id no insert ?
+            cmd.CommandText = @"INSERT into consumidores VALUES (@cashback, @faixa_etaria)";
 
             
             cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);

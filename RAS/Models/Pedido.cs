@@ -20,7 +20,10 @@ namespace RAS.Models
         [Display(Name = "Desconto")]
         public double Desconto { get; set; }
 
+        // Ver se pode fazer isso 
         
-        //PERGUNTAR DA CHAVE ESTRANGEIRA Colaborador_id e consumidor_id 
+        public int? colaborador_id { get; set; }
+        public int? consumidor_id { get; set; }
+        
     }
 }

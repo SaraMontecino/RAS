@@ -8,8 +8,6 @@ namespace RAS.Models
 {
     public class Produto_Pedido
     {
-        //PERGUNTAR DA CHAVE ESTRANGEIRA Produto e Pedido 
-
         public int? IdProduto { get; set; }
         public int? IdPedido { get; set; }
 
@@ -21,6 +19,7 @@ namespace RAS.Models
         [Required(ErrorMessage = "Campo valor obrigatório")]
         public double Valor { get; set; }
 
+        public Produto produto { get; set; }
 
     }
 }
