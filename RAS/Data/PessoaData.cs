@@ -42,7 +42,7 @@ namespace RAS.Data
                 while (reader.Read())
                 {
                     Pessoa pessoa = new Pessoa();
-                    pessoa.IdPessoa         = (int)reader["IdPessoa"];
+                    pessoa.Pessoas_id       = (int)reader["Pessoas_id"];
                     pessoa.Nome             = (string)reader["Nome"];
                     pessoa.Cpf              = (string)reader["CPF"];
                     pessoa.Data_nascimento  = (DateTime)reader["Data de Nascimento"];
@@ -77,14 +77,14 @@ namespace RAS.Data
             {
                 pessoa = new Pessoa
                 {
-                    IdPessoa = (int)reader["IdPessoa"],
-                    Nome = (string)reader["Nome"],
-                    Cpf = (string)reader["CPF"],
+                    Pessoas_id      = (int)reader["Pessoas_id"],
+                    Nome            = (string)reader["Nome"],
+                    Cpf             = (string)reader["CPF"],
                     Data_nascimento = (DateTime)reader["Data de Nascimento"],
-                    Email = (string)reader["Email"],
-                    Sexo = (string)reader["Sexo"],
-                    Telefone = (string)reader["Telefone"],
-                    Status = (int)reader["Status"]
+                    Email           = (string)reader["Email"],
+                    Sexo            = (string)reader["Sexo"],
+                    Telefone        = (string)reader["Telefone"],
+                    Status          = (int)reader["Status"]
                 };
             }
 
@@ -109,14 +109,14 @@ namespace RAS.Data
             {
                 pessoa = new Pessoa
                 {
-                    IdPessoa = (int)reader["IdPessoa"],
-                    Nome = (string)reader["Nome"],
-                    Cpf = (string)reader["CPF"],
+                    Pessoas_id      = (int)reader["Pessoas_id"],
+                    Nome            = (string)reader["Nome"],
+                    Cpf             = (string)reader["CPF"],
                     Data_nascimento = (DateTime)reader["Data de Nascimento"],
-                    Email = (string)reader["Email"],
-                    Sexo = (string)reader["Sexo"],
-                    Telefone = (string)reader["Telefone"],
-                    Status = (int)reader["Status"]
+                    Email           = (string)reader["Email"],
+                    Sexo            = (string)reader["Sexo"],
+                    Telefone        = (string)reader["Telefone"],
+                    Status          = (int)reader["Status"]
                 };
             }
 
@@ -133,9 +133,9 @@ namespace RAS.Data
             
             cmd.CommandText = @"UPDATE pessoas
                                 SET Nome = @nome, Cpf = @cpf, Data_nascimento = @data_nascimento, Email = @email, Sexo = @sexo, Telefone = @telefone, Status = @status 
-                                WHERE IdCliente = @id";
+                                WHERE pessoas_id = @id";
 
-            cmd.Parameters.AddWithValue("@id", pessoa.IdPessoa);
+            cmd.Parameters.AddWithValue("@id", pessoa.Pessoas_id);
             cmd.Parameters.AddWithValue("@nome", pessoa.Nome);
             cmd.Parameters.AddWithValue("@cpf", pessoa.Cpf);
             cmd.Parameters.AddWithValue("@data_nascimento", pessoa.Data_nascimento);
@@ -154,7 +154,7 @@ namespace RAS.Data
             
             cmd.Connection = base.connectionDB;
 
-            cmd.CommandText = @"DELETE FROM pessoas WHERE IdPessoa=@id";
+            cmd.CommandText = @"DELETE FROM pessoas WHERE pessoas_id =@id";
 
             cmd.Parameters.AddWithValue("@id", id);
 

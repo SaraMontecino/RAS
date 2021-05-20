@@ -5,7 +5,7 @@ namespace RAS.Models
 {
     public class Pessoa
     {
-        public int? IdPessoa { get; set; }
+        public int? Pessoas_id { get; set; }
 
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "Campo nome obrigatório")]

@@ -8,7 +8,7 @@ namespace RAS.Models
 {
     public class Produto
     {
-        public int? IdProduto { get; set; }
+        public int? Produtos_id { get; set; }
 
         [Display(Name = "Tipo")]
         [Required(ErrorMessage = "Campo tipo obrigatório")]

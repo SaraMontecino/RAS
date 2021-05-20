@@ -8,8 +8,8 @@ namespace RAS.Models
 {
     public class Produto_Pedido
     {
-        public int? IdProduto { get; set; }
-        public int? IdPedido { get; set; }
+        public int? Produtos_id { get; set; }
+        public int? Pedidos_id { get; set; }
 
         [Display(Name = "Quantidade")]
         [Required(ErrorMessage = "Campo quantidade obrigatório")]

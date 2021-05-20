@@ -43,9 +43,10 @@ namespace RAS.Data
                 lista = new List<Consumidor>();
                 while (reader.Read())
                 {
-                    Consumidor consumidor = new Consumidor();
-                    consumidor.Cashback = (int)reader["Cashback"];
-                    consumidor.Faixa_etaria = (string)reader["Faixa_etaria"];
+                    Consumidor consumidor     = new Consumidor();
+                    consumidor.Pessoas_id     = (int)reader["Pessoas_id"];
+                    consumidor.Cashback       = (int)reader["Cashback"];
+                    consumidor.Faixa_etaria   = (string)reader["Faixa_etaria"];
                     
                     lista.Add(consumidor);
                 }
@@ -59,22 +60,24 @@ namespace RAS.Data
 
         public void Update(Consumidor consumidor)
         {
-            // Criando o cmd ( comando SQL) para executar um comando SQL no banco de dados
+            
             SqlCommand cmd = new SqlCommand();
-            // Conexao com o Banco de Dados
-            cmd.Connection = base.connectionDB;
-            //Criada astring SQL (comando SQL)
 
-            //IDPessoa
+            cmd.Connection = base.connectionDB;
+
+            //Pessoas_id -- Posso fazer isso?
             cmd.CommandText = @"UPDATE consumidores
                                 SET Cashback = @cashback, Faixa_etaria = @faixa_etaria 
-                                WHERE IdCliente = @id";
+                                WHERE pessoas_id = @id";
 
-            //cmd.Parameters.AddWithValue("@id", consumidor.IdPessoa);
+            cmd.Parameters.AddWithValue("@id", consumidor.Pessoas_id);
+            cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);
+            cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.Faixa_etaria);
             
 
             cmd.ExecuteNonQuery();
         }
 
+        // Preciso do delete ? 
     }
 }

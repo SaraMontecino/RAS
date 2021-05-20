@@ -45,11 +45,12 @@ namespace RAS.Data
                 lista = new List<Colaborador>();
                 while (reader.Read())
                 {
-                    Colaborador colaborador = new Colaborador();
-                    colaborador.Remuneracao = (int)reader["Remuneracao"];
-                    colaborador.Comissao = (double)reader["Comissao"];
-                    colaborador.Login = (string)reader["Login"];
-                    colaborador.Senha = (string)reader["Senha"];
+                    Colaborador colaborador     = new Colaborador();
+                    colaborador.Pessoas_id      = (int)reader["Pessoas_id"];
+                    colaborador.Remuneracao     = (int)reader["Remuneracao"];
+                    colaborador.Comissao        = (double)reader["Comissao"];
+                    colaborador.Login           = (string)reader["Login"];
+                    colaborador.Senha           = (string)reader["Senha"];
                     
                     lista.Add(colaborador);
                 }
@@ -63,22 +64,26 @@ namespace RAS.Data
 
         public void Update(Colaborador colaborador)
         {
-            // Criando o cmd ( comando SQL) para executar um comando SQL no banco de dados
             SqlCommand cmd = new SqlCommand();
-            // Conexao com o Banco de Dados
-            cmd.Connection = base.connectionDB;
-            //Criada astring SQL (comando SQL)
 
-            //IDPessoa
+            cmd.Connection = base.connectionDB;
+
+            //Pessoas_id
             cmd.CommandText = @"UPDATE colaboradores
                                 SET Remuneracao = @remuneracao, Comissao = @comissao, Login = @login, Senha = @senha 
-                                WHERE IdCliente = @id";
+                                WHERE pessoas_id = @id";
 
-            //cmd.Parameters.AddWithValue("@id", consumidor.IdPessoa);
+            cmd.Parameters.AddWithValue("@id", colaborador.Pessoas_id);
+            cmd.Parameters.AddWithValue("@remuneracao", colaborador.Remuneracao);
+            cmd.Parameters.AddWithValue("@comissao", colaborador.Comissao);
+            cmd.Parameters.AddWithValue("@login", colaborador.Login);
+            cmd.Parameters.AddWithValue("@senha", colaborador.Senha);
             
 
             cmd.ExecuteNonQuery();
         }
+
+        // Preciso do delete ? 
 
     }
 }

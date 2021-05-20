@@ -8,7 +8,7 @@ namespace RAS.Models
 {
     public class Pedido
     {
-        public int? IdPedido { get; set; }
+        public int? Pedidos_id { get; set; }
 
         [Display(Name = "Data")]
         [Required(ErrorMessage = "Campo Data obrigatório")]
@@ -22,8 +22,8 @@ namespace RAS.Models
 
         // Ver se pode fazer isso 
         
-        public int? colaborador_id { get; set; }
-        public int? consumidor_id { get; set; }
+        public int? Colaboradores_id { get; set; }
+        public int? Consumidores_id { get; set; }
         
     }
 }
