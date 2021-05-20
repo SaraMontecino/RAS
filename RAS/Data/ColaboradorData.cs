@@ -62,6 +62,8 @@ namespace RAS.Data
             return lista;
         }
 
+        // Preciso fazer um read id ?
+
         public void Update(Colaborador colaborador)
         {
             SqlCommand cmd = new SqlCommand();
