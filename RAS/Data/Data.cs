@@ -13,11 +13,11 @@ namespace RAS.Data
             try
             {
                 //string de conexão com o Banco de Dados
-                string strConexao = @"Data Source = localhost;
-                            Initial Catalog = BDRAS;
-                            Integrated Security = true;    
+                string strConexao = @"Data Source = LAPTOP-CUFHBOMC\SQLSERVERSARA;
+                            Initial Catalog = RAS3;
+                            Integrated Security = false;    
                             User Id=sa; 
-                            Password=dba";     
+                            Password=rusa3121";     
 
                 connectionDB = new SqlConnection(strConexao);
 

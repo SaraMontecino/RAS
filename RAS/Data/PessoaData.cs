@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using RAS.Models;
@@ -91,7 +92,7 @@ namespace RAS.Data
             return pessoa;
         }
 
-
+        
         public Pessoa Read(string cpf)
         {
             Pessoa pessoa = null;
@@ -122,7 +123,7 @@ namespace RAS.Data
 
             return pessoa;
         }
-
+        
 
         public void Update(Pessoa pessoa)
         {
@@ -161,4 +162,4 @@ namespace RAS.Data
             cmd.ExecuteNonQuery();
         }
     }
-}
+}*/

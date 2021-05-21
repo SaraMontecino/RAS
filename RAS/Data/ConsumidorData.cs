@@ -7,9 +7,7 @@ namespace RAS.Data
 {
     public class ConsumidorData : Data
     {
-        // TENHO QUE PASSAR A PESSO AQUI 
-        //COMO PASSA DUAS HERANÇAS
-
+        
         public void Create(Consumidor consumidor)
         {
             
@@ -17,11 +15,13 @@ namespace RAS.Data
             
             cmd.Connection = base.connectionDB;
 
-            // tenho que passar pessoa_id no insert ?
-            cmd.CommandText = @"INSERT into consumidores VALUES (@cashback, @faixa_etaria)";
+            cmd.CommandText = @"exec cad_Consumidor @nome, @cpf, @sexo, @telefone, @faixa_etaria";
 
             
-            cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);
+            cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
+            cmd.Parameters.AddWithValue("@cpf", consumidor.Cpf);
+            cmd.Parameters.AddWithValue("@sexo", consumidor.Sexo);
+            cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
             cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.Faixa_etaria);
             
             cmd.ExecuteNonQuery();
@@ -58,7 +58,34 @@ namespace RAS.Data
             return lista;
         }
 
-        // Preciso fazer um read id ?
+        public Consumidor Read(int id)
+        {
+            
+            Consumidor consumidor = null;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = base.connectionDB; 
+
+            cmd.CommandText = @"SELECT * FROM v_consumidores ";
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                consumidor = new Consumidor
+                {
+                    Pessoas_id      = (int)reader["Pessoas_id"],
+                    Nome            = (string)reader["Nome"],
+                    Cpf             = (string)reader["CPF"],
+                    Cashback        = (double)reader["Cashback"],
+                    Status          = (int)reader["Status"],
+                };
+            }
+
+            return consumidor;
+        }
 
         public void Update(Consumidor consumidor)
         {
@@ -67,19 +94,20 @@ namespace RAS.Data
 
             cmd.Connection = base.connectionDB;
 
-            //Pessoas_id -- Posso fazer isso?
-            cmd.CommandText = @"UPDATE consumidores
-                                SET Cashback = @cashback, Faixa_etaria = @faixa_etaria 
-                                WHERE pessoas_id = @id";
+            cmd.CommandText = @"exec alt_Consumidor @id, @nome, @cpf, @status, @faixa_etaria, @telefone";
 
             cmd.Parameters.AddWithValue("@id", consumidor.Pessoas_id);
-            cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);
+            cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
+            cmd.Parameters.AddWithValue("@cpf", consumidor.Cpf);
+            cmd.Parameters.AddWithValue("@status", consumidor.Status);
             cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.Faixa_etaria);
-            
+            cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
+
 
             cmd.ExecuteNonQuery();
         }
 
         // Preciso do delete ? 
+        // Fazer uma procedure que deleta as coisas 
     }
 }

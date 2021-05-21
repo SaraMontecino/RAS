@@ -14402,8 +14402,18 @@
   "RootNamespace": "RAS",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\Views\\Consumidor\\Index.cshtml",
+      "TargetPath": "Views\\Consumidor\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\Views\\Consumidor\\Create.cshtml",
+      "TargetPath": "Views\\Consumidor\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14434,6 +14444,11 @@
     {
       "FilePath": "c:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\Views\\Consumidor\\Update.cshtml",
+      "TargetPath": "Views\\Consumidor\\Update.cshtml",
       "FileKind": "mvc"
     }
   ],
