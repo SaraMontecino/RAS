@@ -13,8 +13,8 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = base.connectionDB;
 
-            cmd.CommandText = @"INSERT INTO produtos VALUES (@tipo, @descricao, @estoque, @valor) ";
-
+            cmd.CommandText = @"exec cad_Produto @tipo, @descricao, @estoque, @valor ";
+            
             cmd.Parameters.AddWithValue("@tipo", produto.Tipo);
             cmd.Parameters.AddWithValue("@descricao", produto.Descricao);
             cmd.Parameters.AddWithValue("@estoque", produto.Estoque);
@@ -40,7 +40,7 @@ namespace RAS.Data
                 while (reader.Read())
                 {
                     Produto produto     = new Produto();
-                    produto.Produtos_id   = (int)reader["Produtos_id"];
+                    produto.Produtos_id = (int)reader["Produtos_id"];
                     produto.Tipo        = (int)reader["Tipo"];
                     produto.Descricao   = (string)reader["Descricao"];
                     produto.Estoque     = (int)reader["Estoque"];
@@ -64,6 +64,8 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = base.connectionDB; 
 
+            cmd.CommandText = @"SELECT * FROM v_produtos ";
+
             cmd.Parameters.AddWithValue("@id", id);
 
             SqlDataReader reader = cmd.ExecuteReader();
@@ -72,8 +74,8 @@ namespace RAS.Data
             {
                 produto = new Produto
                 {
-                    Produtos_id        = (int)reader["Produtos_id"],
-                    Tipo            = (int)reader["Tipo"],
+                    Produtos_id     = (int)reader["Produtos_id"],
+                    Tipo            = (int)reader["Tipo"], //nao ta na view
                     Descricao       = (string)reader["Descricao"],
                     Estoque         = (int)reader["Estoque"],
                     Valor           = (double)reader["Valor"]
@@ -90,9 +92,7 @@ namespace RAS.Data
             
             cmd.Connection = base.connectionDB;
             
-            cmd.CommandText = @"UPDATE produtos
-                                SET Tipo = @tipo, Descricao = @descricao, Estoque = @estoque, Valor = @valor
-                                WHERE produtos_id = @id";
+            cmd.CommandText = @"exec alt_Produto @produto_id int, @tipo, @descricao, @estoque, @valor";
 
             cmd.Parameters.AddWithValue("@id", produto.Produtos_id);
             cmd.Parameters.AddWithValue("@tipo", produto.Tipo);
@@ -110,7 +110,7 @@ namespace RAS.Data
             
             cmd.Connection = base.connectionDB;
 
-            cmd.CommandText = @"DELETE FROM produtos WHERE produtos_id =@id";
+            cmd.CommandText = @"exec del_Produto @id";
 
             cmd.Parameters.AddWithValue("@id", id);
 

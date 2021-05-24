@@ -27,15 +27,15 @@ namespace RAS.Controllers
         public IActionResult Create(IFormCollection colaborador)
         {
             
-            double remuneracao      = colaborador["Remuneracao"];
-            double comissao         = colaborador["Comissao"];
+            double remuneracao      = Convert.ToDouble(colaborador["Remuneracao"]);
+            double comissao         = Convert.ToDouble(colaborador["Comissao"]);
             string login            = colaborador["Login"];
             string senha            = colaborador["Senha"];
            
 
-            var novoColaborador          = new colaborador();
-            novoColaborador.Remuneracao  = colaborador["Remuneracao"];
-            novoColaborador.Comissao     = colaborador["Comissao"];
+            var novoColaborador          = new Colaborador();
+            novoColaborador.Remuneracao  = Convert.ToDouble(colaborador["Remuneracao"]);
+            novoColaborador.Comissao     = Convert.ToDouble(colaborador["Comissao"]);
             novoColaborador.Login        = colaborador["Login"];
             novoColaborador.Senha        = colaborador["Senha"];
 
@@ -48,8 +48,8 @@ namespace RAS.Controllers
         [HttpPost]
         public IActionResult Read(IFormCollection colaborador)
         {
-            double remuneracao      = colaborador["Remuneracao"];
-            double comissao         = colaborador["Comissao"];
+            double remuneracao      = Convert.ToDouble(colaborador["Remuneracao"]);
+            double comissao         = Convert.ToDouble(colaborador["Comissao"]);
             string login            = colaborador["Login"];
             string senha            = colaborador["Senha"];
 

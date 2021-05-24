@@ -1,11 +1,129 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using RAS.Models;
+using System.Data.SqlClient;
 namespace RAS.Data
 {
-    public class Produto_PedidoData
+    public class Produto_PedidoData : Data
     {
+        public void Create(Produto_Pedido produto_pedido)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = base.connectionDB;
+
+            cmd.CommandText = @"exec cad_ProdutosPedidos @pedido, @produto, @qtd, @valor ";
+            
+            cmd.Parameters.AddWithValue("@pedido", produto_pedido.Produtos_id);
+            cmd.Parameters.AddWithValue("@produto", produto_pedido.Pedidos_id);
+            cmd.Parameters.AddWithValue("@qtd", produto_pedido.Qtd);
+            cmd.Parameters.AddWithValue("@valor", produto_pedido.Valor);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public List<Produto_Pedido> Read()
+        {
+            List<Produto_Pedido> lista = null;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = base.connectionDB;
+
+                cmd.CommandText = "SELECT * FROM produtos_pedidos";
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                lista = new List<Produto_Pedido>();
+                while (reader.Read())
+                {
+                    Produto_Pedido produto_pedido   = new Produto_Pedido();
+                    produto_pedido.Produtos_id      = (int)reader["Produtos_id"];
+                    produto_pedido.Pedidos_id       = (int)reader["Pedidos_id"];
+                    produto_pedido.Qtd              = (int)reader["Qtd"];
+                    produto_pedido.Valor            = (double)reader["Valor"];
+
+                    lista.Add(produto_pedido);
+                }
+            }
+            catch (SqlException sqlerror)
+            {
+                
+            }
+            return lista;
+        }
+
+        public Produto_Pedido Read(int id)
+        {
+            
+            Produto_Pedido produto_pedido = null;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = base.connectionDB; 
+
+            cmd.CommandText = @"SELECT * FROM v_produtos ";
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                produto_pedido = new Produto_Pedido
+                {
+                    Produtos_id     = (int)reader["Produtos_id"],
+                    Pedidos_id      = (int)reader["Pedidos_id"], 
+                    Qtd             = (int)reader["Qtd"],
+                    Valor           = (double)reader["Valor"]
+                };
+            }
+
+            return produto_pedido;
+        }
+
+        public void Update(Produto_Pedido produto_pedido)
+        {
+            
+            SqlCommand cmd = new SqlCommand();
+            
+            cmd.Connection = base.connectionDB;
+            
+            cmd.CommandText = @"exec alt_ProdutosPedidos @pedido, @produto, @qtd ";
+
+            cmd.Parameters.AddWithValue("@pedido", produto_pedido.Pedidos_id);
+            cmd.Parameters.AddWithValue("@produto", produto_pedido.Produtos_id);
+            cmd.Parameters.AddWithValue("@qtd", produto_pedido.Qtd);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        // Falta o delete
+        public void Delete(int id)
+        {
+            
+            SqlCommand cmd = new SqlCommand();
+            
+            cmd.Connection = base.connectionDB;
+
+            cmd.CommandText = @"exec del_Produto_Pedido @id";
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.ExecuteNonQuery();
+        }
+        //PERGUNTAR
+        /*
+        go
+        create procedure del_Produto_Pedido
+        (
+            @pedido_id int, @produto_id int
+        )
+        as
+        begin
+            delete from produtos_pedidos 
+                where (pedidos_id = @pedido_id) and (produtos_id = @produto_id)
+        end
+        go
+        */
     }
 }

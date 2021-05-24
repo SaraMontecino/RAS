@@ -19,7 +19,7 @@ namespace RAS.Models
         [Required(ErrorMessage = "Campo valor obrigatório")]
         public double Valor { get; set; }
 
-        public Produto produto { get; set; }
+        public Produto_Pedido produto_pedido { get; set; }
 
     }
 }

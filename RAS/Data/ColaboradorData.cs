@@ -113,8 +113,19 @@ namespace RAS.Data
             cmd.ExecuteNonQuery();
         }
 
-        // Preciso do delete ? 
-        // Fazer uma procedure que deleta as coisas 
+         public void Delete(int id)
+        {
+            
+            SqlCommand cmd = new SqlCommand();
+            
+            cmd.Connection = base.connectionDB;
+
+            cmd.CommandText = @"exec del_Colaborador @id";
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.ExecuteNonQuery();
+        }
 
     }
 }

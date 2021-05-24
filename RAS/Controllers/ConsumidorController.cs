@@ -28,13 +28,13 @@ namespace RAS.Controllers
         {
             // Arrumar pra colocar o cashback como double
             string nome         = consumidor["Nome"];
-            double cashback     = consumidor["Cashback"];
+            double cashback     = Convert.ToDouble(consumidor["Cashback"]);
             string faixa_etaria = consumidor["Faixa_etaria"];
             
 
             var novoConsumidor          = new Consumidor();
             novoConsumidor.Nome         = consumidor["nome"];
-            novoConsumidor.Cashback     = consumidor["Cashback"];
+            novoConsumidor.Cashback     = Convert.ToDouble(consumidor["Cashback"]);
             novoConsumidor.Faixa_etaria = consumidor["Faixa_etaria"];
 
             using (var data = new ConsumidorData())
@@ -47,7 +47,7 @@ namespace RAS.Controllers
         public IActionResult Read(IFormCollection consumidor)
         {
             string nome         = consumidor["Nome"];
-            double cashback     = consumidor["Cashback"];
+            double cashback     = Convert.ToDouble(consumidor["Cashback"]);
             string faixa_etaria = consumidor["Faixa_etaria"];
 
            

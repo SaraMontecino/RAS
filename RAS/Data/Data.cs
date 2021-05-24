@@ -14,7 +14,7 @@ namespace RAS.Data
             {
                 //string de conexão com o Banco de Dados
                 string strConexao = @"Data Source = LAPTOP-CUFHBOMC\SQLSERVERSARA;
-                            Initial Catalog = RAS3;
+                            Initial Catalog = RAS4;
                             Integrated Security = false;    
                             User Id=sa; 
                             Password=rusa3121";     

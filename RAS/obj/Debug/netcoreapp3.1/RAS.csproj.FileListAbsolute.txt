@@ -41,3 +41,6 @@ C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\R
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.Views.pdb
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.csproj.CopyComplete
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.genruntimeconfig.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Create.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Update.cshtml.g.cs
