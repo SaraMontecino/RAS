@@ -97,33 +97,19 @@ namespace RAS.Data
             cmd.ExecuteNonQuery();
         }
 
-        // Falta o delete
-        public void Delete(int id)
+        public void Delete(int? pedido_id, int? produto_id)
         {
             
             SqlCommand cmd = new SqlCommand();
             
             cmd.Connection = base.connectionDB;
 
-            cmd.CommandText = @"exec del_Produto_Pedido @id";
+            cmd.CommandText = @"exec del_Produto_Pedido @pedido_id, @produto_id";
 
-            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@pedido_id", pedido_id);
+            cmd.Parameters.AddWithValue("@produto_id",  produto_id);
 
             cmd.ExecuteNonQuery();
         }
-        //PERGUNTAR
-        /*
-        go
-        create procedure del_Produto_Pedido
-        (
-            @pedido_id int, @produto_id int
-        )
-        as
-        begin
-            delete from produtos_pedidos 
-                where (pedidos_id = @pedido_id) and (produtos_id = @produto_id)
-        end
-        go
-        */
     }
 }
