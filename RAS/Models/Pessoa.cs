@@ -18,7 +18,7 @@ namespace RAS.Models
         public string Cpf { get; set; }
 
         [Display(Name = "Data de Nascimento ")]
-        public DateTime Data_nascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
 
         [Display(Name = "Email")]
         [MinLength(15)]

@@ -29,13 +29,13 @@ namespace RAS.Controllers
             // Arrumar pra colocar o cashback como double
             string nome         = consumidor["Nome"];
             double cashback     = Convert.ToDouble(consumidor["Cashback"]);
-            string faixa_etaria = consumidor["Faixa_etaria"];
+            int    faixa_etaria = Convert.ToInt32(consumidor["FaixaEtaria"]);
             
 
             var novoConsumidor          = new Consumidor();
             novoConsumidor.Nome         = consumidor["nome"];
             novoConsumidor.Cashback     = Convert.ToDouble(consumidor["Cashback"]);
-            novoConsumidor.Faixa_etaria = consumidor["Faixa_etaria"];
+            novoConsumidor.FaixaEtaria  = Convert.ToInt32(consumidor["FaixEtaria"]);
 
             using (var data = new ConsumidorData())
                 data.Create(novoConsumidor);
@@ -48,7 +48,7 @@ namespace RAS.Controllers
         {
             string nome         = consumidor["Nome"];
             double cashback     = Convert.ToDouble(consumidor["Cashback"]);
-            string faixa_etaria = consumidor["Faixa_etaria"];
+            int faixa_etaria    = Convert.ToInt32(consumidor["FaixaEtaria"]);
 
            
             return View("Create");

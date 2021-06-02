@@ -1,0 +1,25 @@
+@model Pedido
+
+<br/>
+@if(@Model == null)
+{
+    <h3>@ViewBag.Mensagem</h3>
+}
+else
+{
+    <h3>@ViewBag.Mensagem</h3>
+    <table class="table table-hover">
+        <tr>
+            <td>@Model.Pedidos_id</td>
+            <td>@Model.Data</td>
+            <td>@Model.Valor</td>
+            <td>@Model.Desconto</td>
+            <td>
+                <a class="btn btn-sm btn-danger" href="/pedido/delete/@Model.Pedidos_id">Apagar</a>
+                <a class="btn btn-sm btn-warning" href="/pedido/update">Editar</a>
+            </td>
+
+        </tr>
+    </table>
+}
+<a class="btn btn-primary" href="/produto/create">Adicionar</a>

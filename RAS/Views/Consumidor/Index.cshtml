@@ -12,14 +12,19 @@ else
         <tr>
             <td>@Model.Pessoas_id</td>
             <td>@Model.Nome</td>
-            <td>@Model.Cashback</td>
-            <td>@Model.Faixa_etaria</td>
+            <td>@Model.Cpf</td>
+            <td>@Model.DataNascimento</td>
+            <td>@Model.Email</td>
+            <td>@Model.Sexo</td>
+            <td>@Model.Telefone</td>
+            <td>@Model.Status</td>
+            <td>@Model.FaixaEtaria</td>
             <td>
-                <a class="btn btn-sm btn-danger" href="/cliente/delete/@Model.Pessoas_id">Apagar</a>
-                <a class="btn btn-sm btn-warning" href="/cliente/update">Editar</a>
+                <a class="btn btn-sm btn-danger" href="/consumidor/delete/@Model.Pessoas_id">Apagar</a>
+                <a class="btn btn-sm btn-warning" href="/consumidor/update">Editar</a>
             </td>
 
         </tr>
     </table>
 }
-<a class="btn btn-primary" href="/cliente/create">Adicionar</a>
+<a class="btn btn-primary" href="/consumidor/create">Adicionar</a>

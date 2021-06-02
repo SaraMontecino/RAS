@@ -22,7 +22,7 @@ namespace RAS.Data
             cmd.Parameters.AddWithValue("@cpf", consumidor.Cpf);
             cmd.Parameters.AddWithValue("@sexo", consumidor.Sexo);
             cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
-            cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.Faixa_etaria);
+            cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
             
             cmd.ExecuteNonQuery();
         }
@@ -45,8 +45,8 @@ namespace RAS.Data
                 {
                     Consumidor consumidor     = new Consumidor();
                     consumidor.Pessoas_id     = (int)reader["Pessoas_id"];
-                    consumidor.Cashback       = (int)reader["Cashback"];
-                    consumidor.Faixa_etaria   = (string)reader["Faixa_etaria"];
+                    consumidor.Cashback       =(double)reader["Cashback"];
+                    consumidor.FaixaEtaria   = (int)reader["FaixaEtaria"];
                     
                     lista.Add(consumidor);
                 }
@@ -100,7 +100,7 @@ namespace RAS.Data
             cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
             cmd.Parameters.AddWithValue("@cpf", consumidor.Cpf);
             cmd.Parameters.AddWithValue("@status", consumidor.Status);
-            cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.Faixa_etaria);
+            cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
             cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
 
 

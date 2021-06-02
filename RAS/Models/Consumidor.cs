@@ -15,7 +15,7 @@ namespace RAS.Models
         [Display(Name = "Faixa Etária")]
         [Required(ErrorMessage = "Campo faixa etária obrigatório")]
         [MinLength(2)]
-        public string Faixa_etaria { get; set; }
+        public int FaixaEtaria { get; set; }
 
     }
 }

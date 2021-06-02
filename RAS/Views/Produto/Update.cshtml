@@ -1,0 +1,29 @@
+@model Produto
+
+<form asp-controller="Produto" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Tipo"></label>
+        <input asp-for="Tipo" class="form-control" />
+        <span asp-validation-for="Tipo"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descricao"></label>
+        <input asp-for="Descricao" class="form-control" />
+        <span asp-validation-for="Descricao"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estoque"></label>
+        <input asp-for="Estoque" class="form-control" />
+        <span asp-validation-for="Estoque"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Valor"></label>
+        <input asp-for="Valor" class="form-control" />
+        <span asp-validation-for="Valor"></span>
+    </div>
+
+    <button class="btn btn-primary">Atualizar</button>
+</form>

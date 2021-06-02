@@ -13,11 +13,11 @@ namespace RAS.Data
             try
             {
                 //string de conexão com o Banco de Dados
-                string strConexao = @"Data Source = LAPTOP-CUFHBOMC\SQLSERVERSARA;
+                string strConexao = @"Data Source = DESKTOP-R0DQJ08;
                             Initial Catalog = RAS4;
                             Integrated Security = false;    
                             User Id=sa; 
-                            Password=rusa3121";     
+                            Password=rafa123521";     
 
                 connectionDB = new SqlConnection(strConexao);
 

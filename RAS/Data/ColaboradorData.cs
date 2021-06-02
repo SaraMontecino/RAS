@@ -49,7 +49,7 @@ namespace RAS.Data
                 {
                     Colaborador colaborador     = new Colaborador();
                     colaborador.Pessoas_id      = (int)reader["Pessoas_id"];
-                    colaborador.Remuneracao     = (int)reader["Remuneracao"];
+                    colaborador.Remuneracao     = (double)reader["Remuneracao"];
                     colaborador.Comissao        = (double)reader["Comissao"];
                     colaborador.Login           = (string)reader["Login"];
                     colaborador.Senha           = (string)reader["Senha"];
