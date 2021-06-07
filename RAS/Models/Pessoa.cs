@@ -35,7 +35,6 @@ namespace RAS.Models
 
         [Display(Name = "Status")]
         [Required(ErrorMessage = "Campo status obrigatório")]
-        [MinLength(1)]
         public int Status { get; set; }
     }
 }

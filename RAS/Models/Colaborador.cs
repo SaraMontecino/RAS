@@ -10,13 +10,11 @@ namespace RAS.Models
     {
         [Display(Name = "Remuneração")]
         [Required(ErrorMessage = "Campo remuneração obrigatório")]
-        [MinLength(7)]
-        public double Remuneracao { get; set; }
+        public decimal Remuneracao { get; set; }
 
         [Display(Name = "Comissão")]
         [Required(ErrorMessage = "Campo comissao obrigatório")]
-        [MinLength(3)]
-        public double Comissao { get; set; }
+        public decimal Comissao { get; set; }
 
         [Display(Name = "Login")]
         [Required(ErrorMessage = "Campo Login obrigatório")]

@@ -12,9 +12,10 @@ namespace RAS.Controllers
     public class ColaboradorController : Controller
     {
         //private static List<ClienteL clientes = new List<Cliente>();
-        public IActionResult Index(Colaborador novoColaborador)
+        public IActionResult Index()
         {
-            return View(novoColaborador);
+            using(var data = new ColaboradorData())
+            return View(data.Read());
         }
 
         [HttpGet]
@@ -24,39 +25,16 @@ namespace RAS.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(IFormCollection colaborador)
+        public IActionResult Create(Colaborador colaborador)
         {
-            
-            double remuneracao      = Convert.ToDouble(colaborador["Remuneracao"]);
-            double comissao         = Convert.ToDouble(colaborador["Comissao"]);
-            string login            = colaborador["Login"];
-            string senha            = colaborador["Senha"];
            
-
-            var novoColaborador          = new Colaborador();
-            novoColaborador.Remuneracao  = Convert.ToDouble(colaborador["Remuneracao"]);
-            novoColaborador.Comissao     = Convert.ToDouble(colaborador["Comissao"]);
-            novoColaborador.Login        = colaborador["Login"];
-            novoColaborador.Senha        = colaborador["Senha"];
-
             using (var data = new ColaboradorData())
-                data.Create(novoColaborador);
+                data.Create(colaborador);
 
-            return RedirectToAction("Index", novoColaborador);
+            return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public IActionResult Read(IFormCollection colaborador)
-        {
-            double remuneracao      = Convert.ToDouble(colaborador["Remuneracao"]);
-            double comissao         = Convert.ToDouble(colaborador["Comissao"]);
-            string login            = colaborador["Login"];
-            string senha            = colaborador["Senha"];
-
-           
-            return View("Create");
-        }
-
+       
         public IActionResult Delete(int id)
         {
             using (var data = new ColaboradorData())

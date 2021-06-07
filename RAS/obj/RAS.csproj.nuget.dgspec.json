@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\RAS-master\\RAS\\RAS.csproj": {}
+    "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\RAS-master\\RAS\\RAS.csproj": {
+    "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\RAS-master\\RAS\\RAS.csproj",
+        "projectUniqueName": "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj",
         "projectName": "RAS",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\RAS-master\\RAS\\RAS.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\RAS-master\\RAS\\obj\\",
+        "projectPath": "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj",
+        "packagesPath": "C:\\Users\\sara_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sara_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

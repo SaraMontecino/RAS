@@ -49,8 +49,8 @@ namespace RAS.Data
                 {
                     Colaborador colaborador     = new Colaborador();
                     colaborador.Pessoas_id      = (int)reader["Pessoas_id"];
-                    colaborador.Remuneracao     = (double)reader["Remuneracao"];
-                    colaborador.Comissao        = (double)reader["Comissao"];
+                    colaborador.Remuneracao     = (decimal)reader["Remuneracao"];
+                    colaborador.Comissao        = (decimal)reader["Comissao"];
                     colaborador.Login           = (string)reader["Login"];
                     colaborador.Senha           = (string)reader["Senha"];
                     
@@ -82,11 +82,11 @@ namespace RAS.Data
             {
                 colaborador = new Colaborador
                 {
-                    Pessoas_id      = (int)reader["Pessoas_id"],
+                    Pessoas_id      = (int)reader["Id"],
                     Nome            = (string)reader["Nome"],
                     Cpf             = (string)reader["CPF"],
-                    Remuneracao     = (double)reader["Remuneracao"],
-                    Comissao        = (double)reader["Comissao"],
+                    Remuneracao     = (decimal)reader["Remuneracao"],
+                    Comissao        = (decimal)reader["Comissao"],
                     Status          = (int)reader["Status"],
                 };
             }
