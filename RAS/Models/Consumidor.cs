@@ -10,11 +10,10 @@ namespace RAS.Models
     {
         
         [Display(Name = "Cashback")]
-        public double Cashback { get; set; }
+        public decimal Cashback { get; set; }
 
         [Display(Name = "Faixa Etária")]
         [Required(ErrorMessage = "Campo faixa etária obrigatório")]
-        [MinLength(2)]
         public int FaixaEtaria { get; set; }
 
     }

@@ -45,8 +45,8 @@ namespace RAS.Data
                 {
                     Consumidor consumidor     = new Consumidor();
                     consumidor.Pessoas_id     = (int)reader["Pessoas_id"];
-                    consumidor.Cashback       =(double)reader["Cashback"];
-                    consumidor.FaixaEtaria   = (int)reader["FaixaEtaria"];
+                    consumidor.Cashback       =(decimal)reader["Pontos_Acumulados"];
+                    consumidor.FaixaEtaria    = (int)reader["Faixa_etaria"];
                     
                     lista.Add(consumidor);
                 }
@@ -76,11 +76,11 @@ namespace RAS.Data
             {
                 consumidor = new Consumidor
                 {
-                    Pessoas_id      = (int)reader["Pessoas_id"],
-                    Nome            = (string)reader["Nome"],
+                    Pessoas_id      = (int)reader["Id"],
+                    Nome            = (string)reader["Cliente"],
                     Cpf             = (string)reader["CPF"],
-                    Cashback        = (double)reader["Cashback"],
-                    Status          = (int)reader["Status"],
+                    Cashback        = (decimal)reader["Pontos_Acumulados"],
+                    Status          = (int)reader["status"],
                 };
             }
 

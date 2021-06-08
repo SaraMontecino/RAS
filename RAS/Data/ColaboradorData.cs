@@ -64,7 +64,7 @@ namespace RAS.Data
             return lista;
         }
 
-        public Pessoa Read(int id)
+        public Colaborador Read(int id)
         {
             
             Colaborador colaborador = null;
@@ -83,11 +83,11 @@ namespace RAS.Data
                 colaborador = new Colaborador
                 {
                     Pessoas_id      = (int)reader["Id"],
-                    Nome            = (string)reader["Nome"],
+                    Nome            = (string)reader["Colaborador"],
                     Cpf             = (string)reader["CPF"],
-                    Remuneracao     = (decimal)reader["Remuneracao"],
+                    Remuneracao     = (decimal)reader["Salario"],
                     Comissao        = (decimal)reader["Comissao"],
-                    Status          = (int)reader["Status"],
+                    Status          = (int)reader["status"],
                 };
             }
 

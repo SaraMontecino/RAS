@@ -12,9 +12,10 @@ namespace RAS.Controllers
     public class ConsumidorController : Controller
     {
         //private static List<ClienteL clientes = new List<Cliente>();
-        public IActionResult Index(Consumidor novoConsumidor)
+        public IActionResult Index()
         {
-            return View(novoConsumidor);
+            using(var data = new ConsumidorData())
+            return View(data.Read());
         }
 
         [HttpGet]
@@ -24,25 +25,16 @@ namespace RAS.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(IFormCollection consumidor)
+        public IActionResult Create(Consumidor consumidor)
         {
-            // Arrumar pra colocar o cashback como double
-            string nome         = consumidor["Nome"];
-            double cashback     = Convert.ToDouble(consumidor["Cashback"]);
-            int    faixa_etaria = Convert.ToInt32(consumidor["FaixaEtaria"]);
             
-
-            var novoConsumidor          = new Consumidor();
-            novoConsumidor.Nome         = consumidor["nome"];
-            novoConsumidor.Cashback     = Convert.ToDouble(consumidor["Cashback"]);
-            novoConsumidor.FaixaEtaria  = Convert.ToInt32(consumidor["FaixEtaria"]);
-
             using (var data = new ConsumidorData())
-                data.Create(novoConsumidor);
+                data.Create(consumidor);
 
-            return RedirectToAction("Index", novoConsumidor);
+            return RedirectToAction("Index");
         }
 
+/*
         [HttpPost]
         public IActionResult Read(IFormCollection consumidor)
         {
@@ -53,7 +45,7 @@ namespace RAS.Controllers
            
             return View("Create");
         }
-
+*/
         public IActionResult Delete(int id)
         {
             using (var data = new ConsumidorData())

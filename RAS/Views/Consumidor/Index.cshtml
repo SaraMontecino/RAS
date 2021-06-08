@@ -1,4 +1,4 @@
-@model Consumidor
+@model List<Consumidor>
 
 <br/>
 @if(@Model == null)
@@ -7,24 +7,26 @@
 }
 else
 {
-    <h3>@ViewBag.Mensagem @Model.Nome</h3>
     <table class="table table-hover">
-        <tr>
-            <td>@Model.Pessoas_id</td>
-            <td>@Model.Nome</td>
-            <td>@Model.Cpf</td>
-            <td>@Model.DataNascimento</td>
-            <td>@Model.Email</td>
-            <td>@Model.Sexo</td>
-            <td>@Model.Telefone</td>
-            <td>@Model.Status</td>
-            <td>@Model.FaixaEtaria</td>
-            <td>
-                <a class="btn btn-sm btn-danger" href="/consumidor/delete/@Model.Pessoas_id">Apagar</a>
-                <a class="btn btn-sm btn-warning" href="/consumidor/update">Editar</a>
-            </td>
+        @foreach (var con in Model)
+        {   
+            <tr>
+                <td>@con.Pessoas_id</td>
+                <td>@con.Nome</td>
+                <td>@con.Cpf</td>
+                <td>@con.DataNascimento</td>
+                <td>@con.Email</td>
+                <td>@con.Sexo</td>
+                <td>@con.Telefone</td>
+                <td>@con.Status</td>
+                <td>@con.FaixaEtaria</td>
+                <td>
+                    <a class="btn btn-sm btn-danger" href="/consumidor/delete/@con.Pessoas_id">Apagar</a>
+                    <a class="btn btn-sm btn-warning" href="/consumidor/update">Editar</a>
+                </td>
 
-        </tr>
+            </tr>
+        }
     </table>
 }
 <a class="btn btn-primary" href="/consumidor/create">Adicionar</a>
