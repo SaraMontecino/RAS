@@ -41,7 +41,7 @@ namespace RAS.Data
                     produto_pedido.Produtos_id      = (int)reader["Produtos_id"];
                     produto_pedido.Pedidos_id       = (int)reader["Pedidos_id"];
                     produto_pedido.Qtd              = (int)reader["Qtd"];
-                    produto_pedido.Valor            = (double)reader["Valor"];
+                    produto_pedido.Valor            = (decimal)reader["Valor"];
 
                     lista.Add(produto_pedido);
                 }
@@ -74,7 +74,7 @@ namespace RAS.Data
                     Produtos_id     = (int)reader["Produtos_id"],
                     Pedidos_id      = (int)reader["Pedidos_id"], 
                     Qtd             = (int)reader["Qtd"],
-                    Valor           = (double)reader["Valor"]
+                    Valor           = (decimal)reader["Valor"]
                 };
             }
 

@@ -40,11 +40,11 @@ namespace RAS.Data
                 while (reader.Read())
                 {
                     Produto produto     = new Produto();
-                    produto.Produtos_id = (int)reader["Produtos_id"];
+                    produto.Produtos_id = (int)reader["id"];
                     produto.Tipo        = (int)reader["Tipo"];
                     produto.Descricao   = (string)reader["Descricao"];
                     produto.Estoque     = (int)reader["Estoque"];
-                    produto.Valor       = (double)reader["Valor"];
+                    produto.Valor       = (decimal)reader["Valor"];
 
                     lista.Add(produto);
                 }
@@ -64,7 +64,7 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = base.connectionDB; 
 
-            cmd.CommandText = @"SELECT * FROM v_produtos ";
+            cmd.CommandText = @"SELECT * FROM v_produtos where Codigo = @id";
 
             cmd.Parameters.AddWithValue("@id", id);
 
@@ -74,11 +74,11 @@ namespace RAS.Data
             {
                 produto = new Produto
                 {
-                    Produtos_id     = (int)reader["Produtos_id"],
-                    Tipo            = (int)reader["Tipo"], //nao ta na view
-                    Descricao       = (string)reader["Descricao"],
+                    Produtos_id     = (int)reader["Codigo"],
+                    Tipo            = (int)reader["Tipo"], 
+                    Descricao       = (string)reader["Produto"],
                     Estoque         = (int)reader["Estoque"],
-                    Valor           = (double)reader["Valor"]
+                    Valor           = (decimal)reader["Preco"]
                 };
             }
 
@@ -92,7 +92,7 @@ namespace RAS.Data
             
             cmd.Connection = base.connectionDB;
             
-            cmd.CommandText = @"exec alt_Produto @produto_id int, @tipo, @descricao, @estoque, @valor";
+            cmd.CommandText = @"exec alt_Produto @produto_id, @tipo, @descricao, @estoque, @valor";
 
             cmd.Parameters.AddWithValue("@id", produto.Produtos_id);
             cmd.Parameters.AddWithValue("@tipo", produto.Tipo);

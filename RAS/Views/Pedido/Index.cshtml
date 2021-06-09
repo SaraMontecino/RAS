@@ -1,4 +1,4 @@
-@model Pedido
+@model List<Pedido>
 
 <br/>
 @if(@Model == null)
@@ -7,19 +7,21 @@
 }
 else
 {
-    <h3>@ViewBag.Mensagem</h3>
     <table class="table table-hover">
-        <tr>
-            <td>@Model.Pedidos_id</td>
-            <td>@Model.Data</td>
-            <td>@Model.Valor</td>
-            <td>@Model.Desconto</td>
-            <td>
-                <a class="btn btn-sm btn-danger" href="/pedido/delete/@Model.Pedidos_id">Apagar</a>
-                <a class="btn btn-sm btn-warning" href="/pedido/update">Editar</a>
-            </td>
+        @foreach (var ped in Model)
+        {
+            <tr>
+                <td>@ped.Pedidos_id</td>
+                <td>@ped.Data</td>
+                <td>@ped.Valor</td>
+                <td>@ped.Desconto</td>
+                <td>
+                    <a class="btn btn-sm btn-danger" href="/pedido/delete/@ped.Pedidos_id">Apagar</a>
+                    <a class="btn btn-sm btn-warning" href="/pedido/update">Editar</a>
+                </td>
 
-        </tr>
+            </tr>
+        }
     </table>
 }
 <a class="btn btn-primary" href="/produto/create">Adicionar</a>

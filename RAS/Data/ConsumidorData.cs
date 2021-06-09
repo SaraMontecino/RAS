@@ -15,13 +15,18 @@ namespace RAS.Data
             
             cmd.Connection = base.connectionDB;
 
-            cmd.CommandText = @"exec cad_Consumidor @nome, @cpf, @sexo, @telefone, @faixa_etaria";
+            cmd.CommandText = @"exec cad_Consumidor @nome, @cpf, @data_nascimento,@email, @sexo, @telefone, @status,
+                                @cashback, @faixa_etaria";
 
             
             cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
             cmd.Parameters.AddWithValue("@cpf", consumidor.Cpf);
+            cmd.Parameters.AddWithValue("@data_nascimento", consumidor.DataNascimento);
+            cmd.Parameters.AddWithValue("@email", consumidor.Email);
             cmd.Parameters.AddWithValue("@sexo", consumidor.Sexo);
             cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
+            cmd.Parameters.AddWithValue("@status", consumidor.Status);
+            cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);
             cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
             
             cmd.ExecuteNonQuery();
@@ -45,7 +50,7 @@ namespace RAS.Data
                 {
                     Consumidor consumidor     = new Consumidor();
                     consumidor.Pessoas_id     = (int)reader["Pessoas_id"];
-                    consumidor.Cashback       =(decimal)reader["Pontos_Acumulados"];
+                    //consumidor.Cashback       =(decimal)reader["Pontos_Acumulados"];
                     consumidor.FaixaEtaria    = (int)reader["Faixa_etaria"];
                     
                     lista.Add(consumidor);
@@ -66,7 +71,7 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = base.connectionDB; 
 
-            cmd.CommandText = @"SELECT * FROM v_consumidores ";
+            cmd.CommandText = @"SELECT * FROM v_consumidores where id = @id";
 
             cmd.Parameters.AddWithValue("@id", id);
 
@@ -77,10 +82,15 @@ namespace RAS.Data
                 consumidor = new Consumidor
                 {
                     Pessoas_id      = (int)reader["Id"],
-                    Nome            = (string)reader["Cliente"],
+                    Nome            = (string)reader["Colaborador"],
                     Cpf             = (string)reader["CPF"],
+                    DataNascimento  = (DateTime)reader["Data_Nascimento"],
+                    Email           = (string)reader["Email"],
+                    Sexo            = (string)reader["Sexo"],
+                    Telefone        = (string)reader["Telefone"],
                     Cashback        = (decimal)reader["Pontos_Acumulados"],
-                    Status          = (int)reader["status"],
+                    FaixaEtaria     = (int)reader["Idade"],
+                    Status          = (int)reader["Situacao"],
                 };
             }
 
@@ -94,14 +104,19 @@ namespace RAS.Data
 
             cmd.Connection = base.connectionDB;
 
-            cmd.CommandText = @"exec alt_Consumidor @id, @nome, @cpf, @status, @faixa_etaria, @telefone";
+            cmd.CommandText = @"exec alt_Consumidor @id, @nome, @cpf, @data_nascimento,@email, @sexo, @telefone, @status,
+                                @cashback, @faixa_etaria";
 
             cmd.Parameters.AddWithValue("@id", consumidor.Pessoas_id);
             cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
             cmd.Parameters.AddWithValue("@cpf", consumidor.Cpf);
-            cmd.Parameters.AddWithValue("@status", consumidor.Status);
-            cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
+            cmd.Parameters.AddWithValue("@data_nascimento", consumidor.DataNascimento);
+            cmd.Parameters.AddWithValue("@email", consumidor.Email);
+            cmd.Parameters.AddWithValue("@sexo", consumidor.Sexo);
             cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
+            cmd.Parameters.AddWithValue("@status", consumidor.Status);
+            cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);
+            cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
 
 
             cmd.ExecuteNonQuery();

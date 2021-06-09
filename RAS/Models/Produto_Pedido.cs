@@ -17,7 +17,7 @@ namespace RAS.Models
 
         [Display(Name = "Valor")]
         [Required(ErrorMessage = "Campo valor obrigatório")]
-        public double Valor { get; set; }
+        public decimal Valor { get; set; }
 
         public Produto_Pedido produto_pedido { get; set; }
 

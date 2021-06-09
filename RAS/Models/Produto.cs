@@ -12,7 +12,6 @@ namespace RAS.Models
 
         [Display(Name = "Tipo")]
         [Required(ErrorMessage = "Campo tipo obrigatório")]
-        [MinLength(1)]
         public int Tipo { get; set; }
 
         [Display(Name = "Descrição")]
@@ -25,6 +24,6 @@ namespace RAS.Models
 
         [Display(Name = "Valor")]
         [Required(ErrorMessage = "Campo valor obrigatório")]
-        public double Valor { get; set; }
+        public decimal Valor { get; set; }
     }
 }

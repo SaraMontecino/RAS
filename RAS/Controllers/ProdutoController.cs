@@ -11,10 +11,11 @@ namespace RAS.Controllers
 {
     public class ProdutoController : Controller
     {
-        //private static List<ClienteL clientes = new List<Cliente>();
-        public IActionResult Index(Produto novoProduto)
+        
+        public IActionResult Index()
         {
-            return View(novoProduto);
+            using(var data = new ProdutoData())
+            return View(data.Read());
         }
 
         [HttpGet]
@@ -24,26 +25,15 @@ namespace RAS.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(IFormCollection produto)
+        public IActionResult Create(Produto produto)
         {
             
-            int    tipo             = Convert.ToInt32(produto["Tipo"]);
-            string descricao        = produto["Descricao"];
-            int    estoque          = Convert.ToInt32(produto["Estoque"]);
-            double valor            = Convert.ToDouble(produto["Valor"]);
-           
-
-            var novoProduto            = new Produto();
-            novoProduto.Tipo           = Convert.ToInt32(produto["Tipo"]);
-            novoProduto.Descricao      = produto["Descricao"];
-            novoProduto.Estoque        = Convert.ToInt32(produto["Estoque"]);
-            novoProduto.Valor          = Convert.ToDouble(produto["Valor"]);
-
             using (var data = new ProdutoData())
-                data.Create(novoProduto);
+                data.Create(produto);
 
-            return RedirectToAction("Index", novoProduto);
+            return RedirectToAction("Index");
         }
+        /*
 
         [HttpPost]
         public IActionResult Read(IFormCollection produto)
@@ -51,11 +41,12 @@ namespace RAS.Controllers
             int    tipo             = Convert.ToInt32(produto["Tipo"]);
             string descricao        = produto["Descricao"];
             int    estoque          = Convert.ToInt32(produto["Estoque"]);
-            double valor            = Convert.ToDouble(produto["Valor"]);
+            decimal valor           = Convert.ToDecimal(produto["Valor"]);
 
            
             return View("Create");
         }
+        */
 
         public IActionResult Delete(int id)
         {

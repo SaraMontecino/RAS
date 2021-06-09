@@ -12,9 +12,10 @@ namespace RAS.Controllers
     public class Produto_PedidoController : Controller
     {
         //private static List<ClienteL clientes = new List<Cliente>();
-        public IActionResult Index(Produto_Pedido novoProduto_Pedido)
+        public IActionResult Index()
         {
-            return View(novoProduto_Pedido);
+            using(var data = new Produto_PedidoData())
+            return View(data.Read());
         }
 
         [HttpGet]
@@ -24,22 +25,15 @@ namespace RAS.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(IFormCollection produto_Pedido)
+        public IActionResult Create(Produto_Pedido produto_Pedido)
         {
-            
-            int         qtd             = Convert.ToInt32(produto_Pedido["Qtd"]);
-            double      valor           = Convert.ToDouble(produto_Pedido["Valor"]);
-           
-
-            var novoProduto_Pedido            = new Produto_Pedido();
-            novoProduto_Pedido.Qtd            = Convert.ToInt32(produto_Pedido["Qtd"]);
-            novoProduto_Pedido.Valor          = Convert.ToDouble(produto_Pedido["Valor"]);
 
             using (var date = new Produto_PedidoData())
-                date.Create(novoProduto_Pedido);
+                date.Create(produto_Pedido);
 
-            return RedirectToAction("Index", novoProduto_Pedido);
+            return RedirectToAction("Index");
         }
+        /*
 
         [HttpPost]
         public IActionResult Read(IFormCollection produto_Pedido)
@@ -50,6 +44,7 @@ namespace RAS.Controllers
            
             return View("Create");
         }
+        */
 
         public IActionResult Delete(Produto_Pedido produto_Pedido)
         {

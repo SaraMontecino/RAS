@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using RAS.Models;
 using System.Data.SqlClient;
-
 namespace RAS.Data
 {
     public class ColaboradorData : Data
@@ -16,13 +15,17 @@ namespace RAS.Data
             cmd.Connection = base.connectionDB;
 
             // passsar a procedure 
-            cmd.CommandText = @"exec cad_Colaborador @nome, @cpf, @sexo, @email, @remuneracao, @comissao, @login, @senha";
+            cmd.CommandText = @"exec cad_Colaborador @nome, @cpf, @data_nascimento, @email, @sexo, @telefone, @status,   
+                                @remuneracao, @comissao, @login, @senha";
             
 
             cmd.Parameters.AddWithValue("@nome", colaborador.Nome);
             cmd.Parameters.AddWithValue("@cpf", colaborador.Cpf);
-            cmd.Parameters.AddWithValue("@sexo", colaborador.Sexo);
+            cmd.Parameters.AddWithValue("@data_nascimento", colaborador.DataNascimento);
             cmd.Parameters.AddWithValue("@email", colaborador.Email);
+            cmd.Parameters.AddWithValue("@sexo", colaborador.Sexo);
+            cmd.Parameters.AddWithValue("@telefone", colaborador.Telefone);
+            cmd.Parameters.AddWithValue("@status", colaborador.Status);
             cmd.Parameters.AddWithValue("@remuneracao", colaborador.Remuneracao);
             cmd.Parameters.AddWithValue("@comissao", colaborador.Comissao);
             cmd.Parameters.AddWithValue("@login", colaborador.Login);
@@ -64,6 +67,7 @@ namespace RAS.Data
             return lista;
         }
 
+
         public Colaborador Read(int id)
         {
             
@@ -72,7 +76,7 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = base.connectionDB; 
 
-            cmd.CommandText = @"SELECT * FROM v_colaboradores ";
+            cmd.CommandText = @"SELECT * FROM v_colaboradores where id = @id";
 
             cmd.Parameters.AddWithValue("@id", id);
 
@@ -85,9 +89,16 @@ namespace RAS.Data
                     Pessoas_id      = (int)reader["Id"],
                     Nome            = (string)reader["Colaborador"],
                     Cpf             = (string)reader["CPF"],
+                    DataNascimento  = (DateTime)reader["Data_Nascimento"],
+                    Email           = (string)reader["Email"],
+                    Sexo            = (string)reader["Sexo"],
+                    Telefone        = (string)reader["Telefone"],
                     Remuneracao     = (decimal)reader["Salario"],
                     Comissao        = (decimal)reader["Comissao"],
-                    Status          = (int)reader["status"],
+                    Login           = (string)reader["Login"],
+                    Senha           = (string)reader["Senha"],
+                    Status          = (int)reader["Situacao"],
+                    
                 };
             }
 
@@ -99,15 +110,22 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
 
             cmd.Connection = base.connectionDB;
-
-            cmd.CommandText = @"exec alt_Colaborador @id, @nome, @cpf, @status, @remuneracao, @comissao";
+            
+            cmd.CommandText = @"exec alt_Colaborador @id, @nome, @cpf, @data_nascimento,@email, @sexo, @telefone, @status,   
+                                @remuneracao, @comissao, @login, @senha";
 
             cmd.Parameters.AddWithValue("@id", colaborador.Pessoas_id);
             cmd.Parameters.AddWithValue("@nome", colaborador.Nome);
             cmd.Parameters.AddWithValue("@cpf", colaborador.Cpf);
+            cmd.Parameters.AddWithValue("@data_nascimento", colaborador.DataNascimento);
+            cmd.Parameters.AddWithValue("@email", colaborador.Email);
+            cmd.Parameters.AddWithValue("@sexo", colaborador.Sexo);
+            cmd.Parameters.AddWithValue("@telefone", colaborador.Telefone);
             cmd.Parameters.AddWithValue("@status", colaborador.Status);
             cmd.Parameters.AddWithValue("@remuneracao", colaborador.Remuneracao);
             cmd.Parameters.AddWithValue("@comissao", colaborador.Comissao);
+            cmd.Parameters.AddWithValue("@login", colaborador.Login);
+            cmd.Parameters.AddWithValue("@senha", colaborador.Senha);
             
 
             cmd.ExecuteNonQuery();
