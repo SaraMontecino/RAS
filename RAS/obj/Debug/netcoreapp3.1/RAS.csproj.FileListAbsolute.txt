@@ -114,3 +114,4 @@ C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\R
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Create.cshtml.g.cs
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Index.cshtml.g.cs
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Update.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Login.cshtml.g.cs

@@ -8,17 +8,22 @@
 else
 {
     <table class="table table-hover">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Sexo</th>
+            <th>Telefone</th>
+            <th>Idade</th>
+        </tr>
         @foreach (var con in Model)
         {   
             <tr>
                 <td>@con.Pessoas_id</td>
                 <td>@con.Nome</td>
                 <td>@con.Cpf</td>
-                <td>@con.DataNascimento</td>
-                <td>@con.Email</td>
                 <td>@con.Sexo</td>
                 <td>@con.Telefone</td>
-                <td>@con.Status</td>
                 <td>@con.FaixaEtaria</td>
                 <td>
                     <a class="btn btn-sm btn-danger" href="/consumidor/delete/@con.Pessoas_id">Apagar</a>

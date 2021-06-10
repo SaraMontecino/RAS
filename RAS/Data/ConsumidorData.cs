@@ -82,7 +82,7 @@ namespace RAS.Data
                 consumidor = new Consumidor
                 {
                     Pessoas_id      = (int)reader["Id"],
-                    Nome            = (string)reader["Colaborador"],
+                    Nome            = (string)reader["Cliente"],
                     Cpf             = (string)reader["CPF"],
                     DataNascimento  = (DateTime)reader["Data_Nascimento"],
                     Email           = (string)reader["Email"],
