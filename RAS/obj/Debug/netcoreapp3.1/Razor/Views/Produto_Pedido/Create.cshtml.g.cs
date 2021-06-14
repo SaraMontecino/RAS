@@ -27,7 +27,7 @@ using RAS.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cfc7cf3e40e3b3a0e57c018855810e633fd7eeb3", @"/Views/Produto_Pedido/Create.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"805ddc2e71c2f966614767bae78dd92d21819eaa", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7470f38c8ccaf92bcb7e391f3e2f7a3c9f5b2490", @"/Views/_ViewImports.cshtml")]
     public class Views_Produto_Pedido_Create : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Produto_Pedido>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

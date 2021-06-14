@@ -41,7 +41,7 @@ namespace RAS.Data
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = base.connectionDB;
                 
-                cmd.CommandText = "SELECT * FROM consumidores";
+                cmd.CommandText = "SELECT * FROM v_consumidores";
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -49,9 +49,14 @@ namespace RAS.Data
                 while (reader.Read())
                 {
                     Consumidor consumidor     = new Consumidor();
-                    consumidor.Pessoas_id     = (int)reader["Pessoas_id"];
-                    //consumidor.Cashback       =(decimal)reader["Pontos_Acumulados"];
-                    consumidor.FaixaEtaria    = (int)reader["Faixa_etaria"];
+                    consumidor.Pessoas_id     = (int)reader["Id"];
+                    consumidor.Cashback       = (decimal)reader["Pontos_Acumulados"];
+                    consumidor.FaixaEtaria    = (int)reader["Idade"];
+                    consumidor.Nome           = (string)reader["Cliente"];
+                    consumidor.Cpf            = (string)reader["CPF"];
+                    consumidor.Sexo           = (string)reader["Sexo"];
+                    consumidor.Telefone       = (string)reader["Telefone"];
+
                     
                     lista.Add(consumidor);
                 }

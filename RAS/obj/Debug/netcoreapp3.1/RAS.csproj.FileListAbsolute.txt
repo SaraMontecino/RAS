@@ -1,49 +1,3 @@
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.csprojAssemblyReference.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.AssemblyInfoInputs.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.AssemblyInfo.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.csproj.CoreCompileInputs.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorAssemblyInfo.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorAssemblyInfo.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.pdb
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\appsettings.Development.json
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.exe
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.deps.json
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.runtimeconfig.json
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.runtimeconfig.dev.json
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.pdb
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.Views.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.Views.pdb
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\staticwebassets\RAS.StaticWebAssets.Manifest.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\staticwebassets\RAS.StaticWebAssets.xml
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\scopedcss\bundle\RAS.styles.css
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.TagHelpers.input.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.TagHelpers.output.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorCoreGenerate.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorTargetAssemblyInfo.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorTargetAssemblyInfo.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.Views.pdb
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.csproj.CopyComplete
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.genruntimeconfig.cache
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Create.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Index.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Update.cshtml.g.cs
 C:\Users\Usuario\Desktop\RAS-master\RAS\obj\Debug\netcoreapp3.1\RAS.csprojAssemblyReference.cache
 C:\Users\Usuario\Desktop\RAS-master\RAS\obj\Debug\netcoreapp3.1\RAS.AssemblyInfoInputs.cache
 C:\Users\Usuario\Desktop\RAS-master\RAS\obj\Debug\netcoreapp3.1\RAS.AssemblyInfo.cs
@@ -102,19 +56,6 @@ C:\Users\Usuario\Desktop\RAS-master\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Prod
 C:\Users\Usuario\Desktop\RAS-master\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Create.cshtml.g.cs
 C:\Users\Usuario\Desktop\RAS-master\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Index.cshtml.g.cs
 C:\Users\Usuario\Desktop\RAS-master\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Update.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Create.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Index.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Update.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Create.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Index.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Update.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Create.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Index.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Update.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Create.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Index.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Update.cshtml.g.cs
-C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Login.cshtml.g.cs
 C:\Users\guilh\Desktop\Facul\ras\RAS\RAS\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\guilh\Desktop\Facul\ras\RAS\RAS\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\guilh\Desktop\Facul\ras\RAS\RAS\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -172,3 +113,62 @@ C:\Users\guilh\Desktop\Facul\ras\RAS\RAS\obj\Debug\netcoreapp3.1\staticwebassets
 C:\Users\guilh\Desktop\Facul\ras\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.dll
 C:\Users\guilh\Desktop\Facul\ras\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.pdb
 C:\Users\guilh\Desktop\Facul\ras\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.genruntimeconfig.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.exe
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.deps.json
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.runtimeconfig.json
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.runtimeconfig.dev.json
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.pdb
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.Views.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\RAS.Views.pdb
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.csprojAssemblyReference.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.AssemblyInfoInputs.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.AssemblyInfo.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.csproj.CoreCompileInputs.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorAssemblyInfo.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorAssemblyInfo.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\staticwebassets\RAS.StaticWebAssets.Manifest.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\staticwebassets\RAS.StaticWebAssets.xml
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\scopedcss\bundle\RAS.styles.css
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.TagHelpers.input.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.TagHelpers.output.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorCoreGenerate.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Create.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Login.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Colaborador\Update.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Create.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Consumidor\Update.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Create.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Update.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Create.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Update.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Create.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Produto_Pedido\Update.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorTargetAssemblyInfo.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.RazorTargetAssemblyInfo.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.Views.pdb
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.csproj.CopyComplete
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.dll
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.pdb
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.genruntimeconfig.cache

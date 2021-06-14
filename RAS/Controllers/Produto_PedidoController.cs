@@ -11,7 +11,7 @@ namespace RAS.Controllers
 {
     public class Produto_PedidoController : Controller
     {
-        //private static List<ClienteL clientes = new List<Cliente>();
+        /*
         public IActionResult Index()
         {
             using (var data = new ProdutoData())
@@ -33,18 +33,7 @@ namespace RAS.Controllers
 
             return RedirectToAction("Index");
         }
-        /*
-
-        [HttpPost]
-        public IActionResult Read(IFormCollection produto_Pedido)
-        {
-            int         qtd             = Convert.ToInt32(produto_Pedido["Qtd"]);
-            double      valor           = Convert.ToDouble(produto_Pedido["Valor"]);
-
-           
-            return View("Create");
-        }
-        */
+        
 
         public IActionResult Delete(Produto_Pedido produto_Pedido)
         {
@@ -73,5 +62,97 @@ namespace RAS.Controllers
 
             return RedirectToAction("Index");
         }
+        */
+        /*
+        public IActionResult Index()
+        {
+            List<Item> lista = new List<Item>();
+
+            var carrinho = HttpContext.Session.GetString("Carrinho");
+
+            if (carrinho != null)
+            {
+                //TODO Converter String para Lista(Json)
+                lista = System.Text.Json.JsonSerializer.Deserialize<List<Item>>(carrinho);
+            }
+
+            return View(lista);
+
+        }
+
+        
+        [HttpGet]
+        public IActionResult Comprar(int id, int qtd)
+        {
+            List<Item> lista = new List<Item>();
+
+            var carrinho = HttpContext.Session.GetString("Carrinho");
+
+            if (carrinho != null)
+            {
+                //TODO Converter String para Lista(Json)
+                lista = System.Text.Json.JsonSerializer.Deserialize<List<Item>>(carrinho);
+            }
+
+
+            using (var data = new ProdutoData())
+            {
+
+                var item = lista.SingleOrDefault(i => i.Produto.Produtos_id == id);
+
+                if (item == null)
+                {
+                    Produto produto = data.Read(id);
+
+                    item = new Item();
+                    item.Descricao = produto;
+                    item.Quantidade = qtd;
+                    item.Valor = item.Produto.Valor;
+                    lista.Add(item);
+                }
+                else
+                {
+                    item.Quantidade += qtd;
+                }
+
+
+                //TODO Converter Lista para String (Json)
+                carrinho = System.Text.Json.JsonSerializer.Serialize<List<Item>>(lista);
+
+                HttpContext.Session.SetString("Carrinho", carrinho);
+
+                return RedirectToAction("Index");
+            }
+        }
+
+        
+        [HttpGet]
+        public IActionResult Remover(int id)
+        {
+            List<Item> lista = new List<Item>();
+
+            var carrinho = HttpContext.Session.GetString("Carrinho");
+
+            if (carrinho != null)
+            {
+                //TODO Converter String para Lista(Json)
+                lista = System.Text.Json.JsonSerializer.Deserialize<List<Item>>(carrinho);
+            }
+
+
+            using (var data = new ProdutoData())
+            {
+
+                var item = lista.SingleOrDefault(i => i.Produto.Produtos_id == id);
+                lista.Remove(item);
+
+                //TODO Converter Lista para String (Json)
+                carrinho = System.Text.Json.JsonSerializer.Serialize<List<Item>>(lista);
+
+                HttpContext.Session.SetString("Carrinho", carrinho);
+
+                return RedirectToAction("Index");
+            }
+        }*/
     }
 }

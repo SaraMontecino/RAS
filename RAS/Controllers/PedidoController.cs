@@ -11,6 +11,7 @@ namespace RAS.Controllers
 {
     public class PedidoController : Controller
     {
+        /*
         public IActionResult Index()
         {
             using(var data = new PedidoData())
@@ -32,18 +33,6 @@ namespace RAS.Controllers
             return RedirectToAction("Index");
         }
 
-        /*
-        [HttpPost]
-        public IActionResult Read(IFormCollection pedido)
-        {
-            DateTime    data             = Convert.ToDateTime(pedido["Data"]);
-            double      valor            = Convert.ToDouble(pedido["Valor"]);
-            double      desconto         = Convert.ToDouble(pedido["Desconto"]);
-
-           
-            return View("Create");
-        }
-        */
 
         public IActionResult Delete(int id)
         {
@@ -72,6 +61,15 @@ namespace RAS.Controllers
                 data.Update(pedido);
 
             return RedirectToAction("Index");
+        } */
+
+        public IActionResult Index(int id)
+        {
+            //Criando um objeto data da classe ProdutoData
+            using (var data = new PedidoData())
+                return View(data.Read(id));
+            //data.Read() chama a execução do método Read (Select + From Produtos)
         }
+
     }
 }

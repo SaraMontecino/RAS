@@ -33,20 +33,7 @@ namespace RAS.Controllers
 
             return RedirectToAction("Index");
         }
-        /*
-
-        [HttpPost]
-        public IActionResult Read(IFormCollection produto)
-        {
-            int    tipo             = Convert.ToInt32(produto["Tipo"]);
-            string descricao        = produto["Descricao"];
-            int    estoque          = Convert.ToInt32(produto["Estoque"]);
-            decimal valor           = Convert.ToDecimal(produto["Valor"]);
-
-           
-            return View("Create");
-        }
-        */
+        
 
         public IActionResult Delete(int id)
         {

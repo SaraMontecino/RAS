@@ -94,7 +94,7 @@ namespace RAS.Data
             
             cmd.CommandText = @"exec alt_Produto @produto_id, @tipo, @descricao, @estoque, @valor";
 
-            cmd.Parameters.AddWithValue("@id", produto.Produtos_id);
+            cmd.Parameters.AddWithValue("@produto_id", produto.Produtos_id);
             cmd.Parameters.AddWithValue("@tipo", produto.Tipo);
             cmd.Parameters.AddWithValue("@descricao", produto.Descricao);
             cmd.Parameters.AddWithValue("@estoque", produto.Estoque);

@@ -43,7 +43,7 @@ namespace RAS.Data
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = base.connectionDB;
 
-                cmd.CommandText = "SELECT * FROM colaboradores";
+                cmd.CommandText = "SELECT * FROM v_colaboradores";
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -51,11 +51,13 @@ namespace RAS.Data
                 while (reader.Read())
                 {
                     Colaborador colaborador = new Colaborador();
-                    colaborador.Pessoas_id = (int)reader["Pessoas_id"];
-                    colaborador.Remuneracao = (decimal)reader["Remuneracao"];
+                    colaborador.Pessoas_id = (int)reader["Id"];
+                    colaborador.Remuneracao = (decimal)reader["Salario"];
                     colaborador.Comissao = (decimal)reader["Comissao"];
                     colaborador.Login = (string)reader["Login"];
                     colaborador.Senha = (string)reader["Senha"];
+                    colaborador.Nome = (string)reader["Colaborador"];
+                    colaborador.Cpf =(string)reader["CPF"];
 
                     lista.Add(colaborador);
                 }

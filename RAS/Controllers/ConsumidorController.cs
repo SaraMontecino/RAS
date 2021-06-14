@@ -34,18 +34,7 @@ namespace RAS.Controllers
             return RedirectToAction("Index");
         }
 
-/*
-        [HttpPost]
-        public IActionResult Read(IFormCollection consumidor)
-        {
-            string nome         = consumidor["Nome"];
-            double cashback     = Convert.ToDouble(consumidor["Cashback"]);
-            int faixa_etaria    = Convert.ToInt32(consumidor["FaixaEtaria"]);
 
-           
-            return View("Create");
-        }
-*/
         public IActionResult Delete(int id)
         {
             using (var data = new ConsumidorData())
