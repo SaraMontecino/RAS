@@ -14,8 +14,8 @@ namespace RAS.Controllers
         //private static List<ClienteL clientes = new List<Cliente>();
         public IActionResult Index()
         {
-            using(var data = new Produto_PedidoData())
-            return View(data.Read());
+            using (var data = new ProdutoData())
+                return View(data.Read());
         }
 
         [HttpGet]
@@ -65,7 +65,7 @@ namespace RAS.Controllers
         public IActionResult Update(Produto_Pedido produto_Pedido)
         {
 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return View(produto_Pedido);
 
             using (var data = new Produto_PedidoData())

@@ -6,8 +6,8 @@
 }
 
 <form asp-controller="Colaborador" asp-action="Login" method="post">
-    <div style="display: flex; justify-content: center; align-items: center; margin-top: 260px;">
-        <img src="~/assets/images/logo.png" width="400px" height="200px" style="position: absolute; top: 50px;" />
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 200px;">
+        <span style="position: absolute; top: 140px; color: blue; font-size: 62px; font-weight: bold;">RAS</span>
         <div style="width: 400px; height: 50%;">
             <div class="form-group">
                 <label>Login</label>
@@ -21,13 +21,13 @@
                 <span asp-validation-for="Senha"></span>
             </div>
 
-            <button class="btn btn-block button-green">Entrar</button>
+            <button class="btn btn-block btn-primary">Entrar</button>
             <div
                 style="display: flex; align-items: center; justify-content: center; margin-top: 10px; margin-bottom: 5px;">
                 <label style="font-weight: bold;">OU</label>
             </div>
-            <a asp-area="" asp-controller="Colaborador" asp-action="Create"
-                class="btn btn-block button-green a-button">Criar uma conta</a>
+            <a asp-area="" asp-controller="Colaborador" asp-action="Create" class="btn btn-block btn-primary">Criar
+                uma conta</a>
         </div>
     </div>
 </form>

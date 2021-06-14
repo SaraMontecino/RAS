@@ -1,23 +1,49 @@
-@model Produto_Pedido
+@model List<Produto>
 
-<br/>
-@if(@Model == null)
+<br />
+@if (@Model == null)
 {
     <h3>@ViewBag.Mensagem</h3>
 }
 else
 {
-    <h3>@ViewBag.Mensagem</h3>
     <table class="table table-hover">
         <tr>
-            <td>@Model.Qtd</td>
-            <td>@Model.Valor</td>
-            <td>
-                <a class="btn btn-sm btn-danger" href="/Produto_Pedido/delete/@Model.produto_pedido">Apagar</a>
-                <a class="btn btn-sm btn-warning" href="/Produto_Pedido/update">Editar</a>
-            </td>
-
+            <th>Id</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Estoque</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
         </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Produtos_id</td>
+                <td>@p.Tipo</td>
+                <td>@p.Descricao</td>
+                <td>@p.Estoque</td>
+                <td>@p.Valor</td>
+                <td>
+                    <select style="margin-right: 68%; background-color: #cac4c4;" id="quantidade@(p.Produtos_id)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-primary" style="background-color: green;"
+                href="/produto/delete/@p.Produtos_id">Comprar</a>
+                </td>
+
+            </tr>
+        }
     </table>
 }
-<a class="btn btn-primary" href="/Produto_Pedido/create">Adicionar</a>
