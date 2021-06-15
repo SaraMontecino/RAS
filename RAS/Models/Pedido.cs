@@ -20,7 +20,8 @@ namespace RAS.Models
         [Display(Name = "Desconto")]
         public double Desconto { get; set; }
 
-        public List<Produto_Pedido> itens { get; set; }
+
+        public List<Item> Itens { get; set; }
 
         
         public int? Colaboradores_id { get; set; }

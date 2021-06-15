@@ -172,3 +172,6 @@ C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\R
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.dll
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.pdb
 C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\RAS.genruntimeconfig.cache
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Carrinho\Index.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Carrinho\Meus_pedidos.cshtml.g.cs
+C:\Users\sara_\Desktop\FATEC\4° Semeste\INTER\RAS\RAS\obj\Debug\netcoreapp3.1\Razor\Views\Item\Index.cshtml.g.cs

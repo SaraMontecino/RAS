@@ -63,7 +63,7 @@ namespace RAS.Controllers
             return RedirectToAction("Index");
         }
         */
-        /*
+        
         public IActionResult Index()
         {
             List<Item> lista = new List<Item>();
@@ -105,14 +105,14 @@ namespace RAS.Controllers
                     Produto produto = data.Read(id);
 
                     item = new Item();
-                    item.Descricao = produto;
-                    item.Quantidade = qtd;
+                    item.Produto = produto;
+                    item.Qtd = qtd;
                     item.Valor = item.Produto.Valor;
                     lista.Add(item);
                 }
                 else
                 {
-                    item.Quantidade += qtd;
+                    item.Qtd += qtd;
                 }
 
 
@@ -153,6 +153,6 @@ namespace RAS.Controllers
 
                 return RedirectToAction("Index");
             }
-        }*/
+        }
     }
 }

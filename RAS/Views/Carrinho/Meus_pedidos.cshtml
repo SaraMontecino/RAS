@@ -1,0 +1,15 @@
+@model List<Item>
+
+<table class="table table-hover">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Pedidos_id</td>
+            <td>@item.Produto</td>
+            <td>@item.Qtd</td>
+            <td>@item.Valor</td>
+            <td>@(item.Produto.Valor*item.Qtd)</td>
+
+        </tr>
+    }
+</table>

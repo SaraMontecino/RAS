@@ -9,9 +9,6 @@ namespace RAS.Models
     public class Consumidor : Pessoa
     {
         
-        [Display(Name = "Cashback")]
-        public decimal Cashback { get; set; }
-
         [Display(Name = "Faixa Etária")]
         [Required(ErrorMessage = "Campo faixa etária obrigatório")]
         public int FaixaEtaria { get; set; }

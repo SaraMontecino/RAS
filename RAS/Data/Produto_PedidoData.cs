@@ -61,9 +61,9 @@ namespace RAS.Data
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = base.connectionDB; 
 
-            cmd.CommandText = @"SELECT * FROM v_produtos ";
+            cmd.CommandText = @"SELECT * FROM v_produtosPedidos where produtos_id = @Codigo ";
 
-            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@Codigo", id);
 
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -71,10 +71,10 @@ namespace RAS.Data
             {
                 produto_pedido = new Produto_Pedido
                 {
-                    Produtos_id     = (int)reader["Produtos_id"],
-                    Pedidos_id      = (int)reader["Pedidos_id"], 
-                    Qtd             = (int)reader["Qtd"],
-                    Valor           = (decimal)reader["Valor"]
+                    Produtos_id     = (int)reader["Codigo"],
+                    Pedidos_id      = (int)reader["Pedido"], 
+                    Qtd             = (int)reader["Qtd_Vendida"],
+                    Valor           = (decimal)reader["Valor_Produto"]
                 };
             }
 

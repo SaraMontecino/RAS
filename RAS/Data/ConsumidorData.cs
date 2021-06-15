@@ -16,7 +16,7 @@ namespace RAS.Data
             cmd.Connection = base.connectionDB;
 
             cmd.CommandText = @"exec cad_Consumidor @nome, @cpf, @data_nascimento,@email, @sexo, @telefone, @status,
-                                @cashback, @faixa_etaria";
+                                @faixa_etaria";
 
             
             cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
@@ -26,7 +26,6 @@ namespace RAS.Data
             cmd.Parameters.AddWithValue("@sexo", consumidor.Sexo);
             cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
             cmd.Parameters.AddWithValue("@status", consumidor.Status);
-            cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);
             cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
             
             cmd.ExecuteNonQuery();
@@ -50,7 +49,6 @@ namespace RAS.Data
                 {
                     Consumidor consumidor     = new Consumidor();
                     consumidor.Pessoas_id     = (int)reader["Id"];
-                    consumidor.Cashback       = (decimal)reader["Pontos_Acumulados"];
                     consumidor.FaixaEtaria    = (int)reader["Idade"];
                     consumidor.Nome           = (string)reader["Cliente"];
                     consumidor.Cpf            = (string)reader["CPF"];
@@ -93,7 +91,6 @@ namespace RAS.Data
                     Email           = (string)reader["Email"],
                     Sexo            = (string)reader["Sexo"],
                     Telefone        = (string)reader["Telefone"],
-                    Cashback        = (decimal)reader["Pontos_Acumulados"],
                     FaixaEtaria     = (int)reader["Idade"],
                     Status          = (int)reader["Situacao"],
                 };
@@ -110,7 +107,7 @@ namespace RAS.Data
             cmd.Connection = base.connectionDB;
 
             cmd.CommandText = @"exec alt_Consumidor @id, @nome, @cpf, @data_nascimento,@email, @sexo, @telefone, @status,
-                                @cashback, @faixa_etaria";
+                                @faixa_etaria";
 
             cmd.Parameters.AddWithValue("@id", consumidor.Pessoas_id);
             cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
@@ -120,7 +117,6 @@ namespace RAS.Data
             cmd.Parameters.AddWithValue("@sexo", consumidor.Sexo);
             cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
             cmd.Parameters.AddWithValue("@status", consumidor.Status);
-            cmd.Parameters.AddWithValue("@cashback", consumidor.Cashback);
             cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
 
 
