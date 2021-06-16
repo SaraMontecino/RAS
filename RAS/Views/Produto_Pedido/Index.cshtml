@@ -1,4 +1,4 @@
-@model List<Produto>
+@model List<Item>
 
 <br />
 @if (@Model == null)
@@ -19,13 +19,13 @@ else
         @foreach (var p in Model)
         {
             <tr>
-                <td>@p.Produtos_id</td>
-                <td>@p.Tipo</td>
-                <td>@p.Descricao</td>
-                <td>@p.Estoque</td>
-                <td>@p.Valor</td>
+                <td>@p.Produto.Produtos_id</td>
+                <td>@p.Produto.Tipo</td>
+                <td>@p.Produto.Descricao</td>
+                <td>@p.Produto.Estoque</td>
+                <td>@p.Produto.Valor</td>
                 <td>
-                    <select style="margin-right: 68%; background-color: #cac4c4;" id="quantidade@(p.Produtos_id)">
+                    <select style="margin-right: 68%; background-color: #cac4c4;" id="quantidade@(p.Produto.Produtos_id)">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -40,7 +40,7 @@ else
                 </td>
                 <td>
                     <a class="btn btn-sm btn-primary" style="background-color: green;"
-                href="/produto/delete/@p.Produtos_id">Comprar</a>
+                href="/produto/delete/@p.Produto.Produtos_id">Comprar</a>
                 </td>
 
             </tr>
