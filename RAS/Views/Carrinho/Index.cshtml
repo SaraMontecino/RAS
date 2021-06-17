@@ -3,16 +3,16 @@
 @using System.Text.Json
 
 
-@model List<Item>
+@model List<Produto_Pedido>
 
 @{
 
     string json = HttpContextAccessor.HttpContext.Session.GetString("user");
     Consumidor user = JsonSerializer.Deserialize<Consumidor>(json);
 
-    List<Item> itens = Model.ToList();
+    List<Produto_Pedido> itens = Model.ToList();
     //salvar os itens na sessao
-    HttpContextAccessor.HttpContext.Session.SetString("itens", JsonSerializer.Serialize<List<Item>>(itens));
+    HttpContextAccessor.HttpContext.Session.SetString("itens", JsonSerializer.Serialize<List<Produto_Pedido>>(itens));
 
 }
 
@@ -26,11 +26,11 @@
                     <div style="background-color: #ada8a8;" class="card-header">
                         <h5>Carrinho</h5>
                     </div>
-                    <div style="background-color: #cac4c4;" class="card-body cart">
+                    <div style="background-color: #fff;" class="card-body cart">
                         <div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png"
                             width="130" height="130" class="img-fluid mb-4 mr-3">
                             <h3><strong>Seu Carrinho Está Vázio</strong></h3>
-                            <h4>Peça algo agora :)</h4> <a href="/produto/index" class="btn button-green"
+                            <h4>Peça algo agora :)</h4> <a href="/produto_pedido/index" class="btn btn-primary"
                             data-abc="true">Continuar Comprando</a>
                         </div>
                     </div>
@@ -41,15 +41,15 @@
 }
 else
 {
-    <div style="background-color: #cac4c4;" class="container-fluid mt-100">
-        <div style="background-color: #cac4c4;" class="row">
-            <div style="background-color: #cac4c4;" class="col-md-12">
+    <div style="background-color: #fff;" class="container-fluid mt-100">
+        <div style="background-color: #fff;" class="row">
+            <div style="background-color: #fff;" class="col-md-12">
                 <div style="border-width: 1; border-color: #bfbaba; border-style: solid;" class="card">
                     <div style="background-color: #ada8a8;" class="card-header">
                         <h5>Carrinho</h5>
                     </div>
-                    <div style="background-color: #cac4c4;">
-                        <table style="background-color: #cac4c4;" class="table table-hover">
+                    <div style="background-color: #fff;">
+                        <table style="background-color: #fff;" class="table table-hover">
                             <tr>
                                 <th>Nome</th>
                                 <th>Valor</th>
@@ -72,16 +72,23 @@ else
                         </table>
                     </div>
                 </div>
-                <a href="/produto/index" class="btn btn-info cart-btn-transform mt-2 float-right m-2"
-                data-abc="true">Continuar
-                    Comprando</a>
+                <div>
+                    <div style="position: absolute; width: 45%; margin-top: 5px; display: flex;">
+                        <input style="flex: 1;" class="form-control float-left">
+                        <button class="btn btn-primary">OK</button>
+                    </div>
+                    <a href="/produto/index" class="btn btn-info cart-btn-transform mt-2 float-right m-2"
+                    data-abc="true">Continuar
+                        Comprando</a>
 
-                @using (Html.BeginForm("Create", "Pedido", new
-                { Pessoas_id = user.Pessoas_id}
-               , FormMethod.Post))
-                {
-                    <button class="btn btn-primary cart-btn-transform mt-2 float-right" data-abc="true">Reservar Compra</button>
-                }
+                    @using (Html.BeginForm("Create", "Pedido", new
+                    { Colaboradores_id = user.Pessoas_id }
+                   , FormMethod.Post))
+                    {
+                        <button class="btn btn-primary cart-btn-transform mt-2 float-right" data-abc="true">Finalizar
+                            Pedido</button>
+                    }
+                </div>
             </div>
         </div>
     </div>

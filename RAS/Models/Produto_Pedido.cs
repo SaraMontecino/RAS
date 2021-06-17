@@ -8,7 +8,6 @@ namespace RAS.Models
 {
     public class Produto_Pedido
     {
-        public int? Produtos_id { get; set; }
         public int? Pedidos_id { get; set; }
 
         [Display(Name = "Quantidade")]
@@ -19,7 +18,7 @@ namespace RAS.Models
         [Required(ErrorMessage = "Campo valor obrigatório")]
         public decimal Valor { get; set; }
 
-        public Produto_Pedido produto_pedido { get; set; }
+        public Produto Produto { get; set; }
 
     }
 }

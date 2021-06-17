@@ -63,7 +63,7 @@ namespace RAS
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Colaborador}/{action=Login}/{id?}");
+                    pattern: "{controller=Colaborador}/{action=Login}/{id?}/{qtd?}");
             });
         }
     }

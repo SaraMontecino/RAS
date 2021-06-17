@@ -6,110 +6,110 @@ namespace RAS.Data
 {
     public class Produto_PedidoData : Data
     {
-        public void Create(Produto_Pedido produto_pedido)
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = base.connectionDB;
+        // public void Create(Produto_Pedido produto_pedido)
+        // {
+        //     SqlCommand cmd = new SqlCommand();
+        //     cmd.Connection = base.connectionDB;
 
-            cmd.CommandText = @"exec cad_ProdutosPedidos @pedido, @produto, @qtd, @valor ";
-            
-            cmd.Parameters.AddWithValue("@pedido", produto_pedido.Produtos_id);
-            cmd.Parameters.AddWithValue("@produto", produto_pedido.Pedidos_id);
-            cmd.Parameters.AddWithValue("@qtd", produto_pedido.Qtd);
-            cmd.Parameters.AddWithValue("@valor", produto_pedido.Valor);
+        //     cmd.CommandText = @"exec cad_ProdutosPedidos @pedido, @produto, @qtd, @valor
 
-            cmd.ExecuteNonQuery();
-        }
+        //     cmd.Parameters.AddWithValue("@pedido", produto_pedido.Produtos_id);
+        //     cmd.Parameters.AddWithValue("@produto", produto_pedido.Pedidos_id);
+        //     cmd.Parameters.AddWithValue("@qtd", produto_pedido.Qtd);
+        //     cmd.Parameters.AddWithValue("@valor", produto_pedido.Valor);
 
-        public List<Produto_Pedido> Read()
-        {
-            List<Produto_Pedido> lista = null;
+        //     cmd.ExecuteNonQuery();
+        // }
 
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = base.connectionDB;
+        //     public List<Produto_Pedido> Read()
+        //     {
+        //         List<Produto_Pedido> lista = null;
 
-                cmd.CommandText = "SELECT * FROM produtos_pedidos";
+        //         try
+        //         {
+        //             SqlCommand cmd = new SqlCommand();
+        //             cmd.Connection = base.connectionDB;
 
-                SqlDataReader reader = cmd.ExecuteReader();
+        //             cmd.CommandText = "SELECT * FROM produtos_pedidos";
 
-                lista = new List<Produto_Pedido>();
-                while (reader.Read())
-                {
-                    Produto_Pedido produto_pedido   = new Produto_Pedido();
-                    produto_pedido.Produtos_id      = (int)reader["Produtos_id"];
-                    produto_pedido.Pedidos_id       = (int)reader["Pedidos_id"];
-                    produto_pedido.Qtd              = (int)reader["Qtd"];
-                    produto_pedido.Valor            = (decimal)reader["Valor"];
+        //             SqlDataReader reader = cmd.ExecuteReader();
 
-                    lista.Add(produto_pedido);
-                }
-            }
-            catch (SqlException sqlerror)
-            {
-                
-            }
-            return lista;
-        }
+        //             lista = new List<Produto_Pedido>();
+        //             while (reader.Read())
+        //             {
+        //                 Produto_Pedido produto_pedido = new Produto_Pedido();
+        //                 produto_pedido.Produtos_id = (int)reader["Produtos_id"];
+        //                 produto_pedido.Pedidos_id = (int)reader["Pedidos_id"];
+        //                 produto_pedido.Qtd = (int)reader["Qtd"];
+        //                 produto_pedido.Valor = (decimal)reader["Valor"];
 
-        public Produto_Pedido Read(int id)
-        {
-            
-            Produto_Pedido produto_pedido = null;
+        //                 lista.Add(produto_pedido);
+        //             }
+        //         }
+        //         catch (SqlException sqlerror)
+        //         {
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = base.connectionDB; 
+        //         }
+        //         return lista;
+        //     }
 
-            cmd.CommandText = @"SELECT * FROM v_produtosPedidos where produtos_id = @Codigo ";
+        //     public Produto_Pedido Read(int id)
+        //     {
 
-            cmd.Parameters.AddWithValue("@Codigo", id);
+        //         Produto_Pedido produto_pedido = null;
 
-            SqlDataReader reader = cmd.ExecuteReader();
+        //         SqlCommand cmd = new SqlCommand();
+        //         cmd.Connection = base.connectionDB;
 
-            if (reader.Read())
-            {
-                produto_pedido = new Produto_Pedido
-                {
-                    Produtos_id     = (int)reader["Codigo"],
-                    Pedidos_id      = (int)reader["Pedido"], 
-                    Qtd             = (int)reader["Qtd_Vendida"],
-                    Valor           = (decimal)reader["Valor_Produto"]
-                };
-            }
+        //         cmd.CommandText = @"SELECT * FROM v_produtosPedidos where produtos_id = @Codigo ";
 
-            return produto_pedido;
-        }
+        //         cmd.Parameters.AddWithValue("@Codigo", id);
 
-        public void Update(Produto_Pedido produto_pedido)
-        {
-            
-            SqlCommand cmd = new SqlCommand();
-            
-            cmd.Connection = base.connectionDB;
-            
-            cmd.CommandText = @"exec alt_ProdutosPedidos @pedido, @produto, @qtd ";
+        //         SqlDataReader reader = cmd.ExecuteReader();
 
-            cmd.Parameters.AddWithValue("@pedido", produto_pedido.Pedidos_id);
-            cmd.Parameters.AddWithValue("@produto", produto_pedido.Produtos_id);
-            cmd.Parameters.AddWithValue("@qtd", produto_pedido.Qtd);
+        //         if (reader.Read())
+        //         {
+        //             produto_pedido = new Produto_Pedido
+        //             {
+        //                 Produtos_id = (int)reader["Codigo"],
+        //                 Pedidos_id = (int)reader["Pedido"],
+        //                 Qtd = (int)reader["Qtd_Vendida"],
+        //                 Valor = (decimal)reader["Valor_Produto"]
+        //             };
+        //         }
 
-            cmd.ExecuteNonQuery();
-        }
+        //         return produto_pedido;
+        //     }
 
-        public void Delete(int? pedido_id, int? produto_id)
-        {
-            
-            SqlCommand cmd = new SqlCommand();
-            
-            cmd.Connection = base.connectionDB;
+        //     public void Update(Produto_Pedido produto_pedido)
+        //     {
 
-            cmd.CommandText = @"exec del_Produto_Pedido @pedido_id, @produto_id";
+        //         SqlCommand cmd = new SqlCommand();
 
-            cmd.Parameters.AddWithValue("@pedido_id", pedido_id);
-            cmd.Parameters.AddWithValue("@produto_id",  produto_id);
+        //         cmd.Connection = base.connectionDB;
 
-            cmd.ExecuteNonQuery();
-        }
+        //         cmd.CommandText = @"exec alt_ProdutosPedidos @pedido, @produto, @qtd ";
+
+        //         cmd.Parameters.AddWithValue("@pedido", produto_pedido.Pedidos_id);
+        //         cmd.Parameters.AddWithValue("@produto", produto_pedido.Produtos_id);
+        //         cmd.Parameters.AddWithValue("@qtd", produto_pedido.Qtd);
+
+        //         cmd.ExecuteNonQuery();
+        //     }
+
+        //     public void Delete(int? pedido_id, int? produto_id)
+        //     {
+
+        //         SqlCommand cmd = new SqlCommand();
+
+        //         cmd.Connection = base.connectionDB;
+
+        //         cmd.CommandText = @"exec del_Produto_Pedido @pedido_id, @produto_id";
+
+        //         cmd.Parameters.AddWithValue("@pedido_id", pedido_id);
+        //         cmd.Parameters.AddWithValue("@produto_id", produto_id);
+
+        //         cmd.ExecuteNonQuery();
+        //     }
     }
 }

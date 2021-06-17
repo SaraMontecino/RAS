@@ -1,4 +1,4 @@
-@model List<Item>
+@model List<Produto>
 
 <br />
 @if (@Model == null)
@@ -19,13 +19,13 @@ else
         @foreach (var p in Model)
         {
             <tr>
-                <td>@p.Produto.Produtos_id</td>
-                <td>@p.Produto.Tipo</td>
-                <td>@p.Produto.Descricao</td>
-                <td>@p.Produto.Estoque</td>
-                <td>@p.Produto.Valor</td>
+                <td>@p.Produtos_id</td>
+                <td>@p.Tipo</td>
+                <td>@p.Descricao</td>
+                <td>@p.Estoque</td>
+                <td>@p.Valor</td>
                 <td>
-                    <select style="margin-right: 68%; background-color: #cac4c4;" id="quantidade@(p.Produto.Produtos_id)">
+                    <select style="margin-right: 68%; background-color: #white;" id="quantidade@(p.Produtos_id)">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -39,11 +39,23 @@ else
                     </select>
                 </td>
                 <td>
-                    <a class="btn btn-sm btn-primary" style="background-color: green;"
-                href="/produto/delete/@p.Produto.Produtos_id">Comprar</a>
+                    <a id="comprar" class="btn btn-sm btn-primary" style="background-color: green;"
+                href="/carrinho/comprar/@p.Produtos_id" hidden>Comprar</a>
+                    <button onclick="comprar('/carrinho/comprar/@p.Produtos_id', '@(p.Produtos_id)')"
+                class="btn btn-sm btn-primary">Comprar</button>
                 </td>
 
             </tr>
         }
     </table>
 }
+
+<script>
+    function comprar(href, id) {
+        var quantidade = parseInt(document.getElementById('quantidade' + id).value);
+        document.getElementById('comprar').href = href + `/${quantidade}`;
+        document.getElementById('comprar').click();
+        document.getElementById('comprar').href = href;
+
+    }
+</script>
