@@ -7,18 +7,18 @@ namespace RAS.Data
 {
     public class ConsumidorData : Data
     {
-        
+
         public void Create(Consumidor consumidor)
         {
-            
+
             SqlCommand cmd = new SqlCommand();
-            
+
             cmd.Connection = base.connectionDB;
 
             cmd.CommandText = @"exec cad_Consumidor @nome, @cpf, @data_nascimento,@email, @sexo, @telefone, @status,
                                 @faixa_etaria";
 
-            
+
             cmd.Parameters.AddWithValue("@nome", consumidor.Nome);
             cmd.Parameters.AddWithValue("@cpf", consumidor.Cpf);
             cmd.Parameters.AddWithValue("@data_nascimento", consumidor.DataNascimento);
@@ -27,7 +27,7 @@ namespace RAS.Data
             cmd.Parameters.AddWithValue("@telefone", consumidor.Telefone);
             cmd.Parameters.AddWithValue("@status", consumidor.Status);
             cmd.Parameters.AddWithValue("@faixa_etaria", consumidor.FaixaEtaria);
-            
+
             cmd.ExecuteNonQuery();
         }
 
@@ -39,7 +39,7 @@ namespace RAS.Data
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = base.connectionDB;
-                
+
                 cmd.CommandText = "SELECT * FROM v_consumidores";
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -47,15 +47,15 @@ namespace RAS.Data
                 lista = new List<Consumidor>();
                 while (reader.Read())
                 {
-                    Consumidor consumidor     = new Consumidor();
-                    consumidor.Pessoas_id     = (int)reader["Id"];
-                    consumidor.FaixaEtaria    = (int)reader["Idade"];
-                    consumidor.Nome           = (string)reader["Cliente"];
-                    consumidor.Cpf            = (string)reader["CPF"];
-                    consumidor.Sexo           = (string)reader["Sexo"];
-                    consumidor.Telefone       = (string)reader["Telefone"];
+                    Consumidor consumidor = new Consumidor();
+                    consumidor.Pessoas_id = (int)reader["Id"];
+                    consumidor.FaixaEtaria = (int)reader["Idade"];
+                    consumidor.Nome = (string)reader["Cliente"];
+                    consumidor.Cpf = (string)reader["CPF"];
+                    consumidor.Sexo = (string)reader["Sexo"];
+                    consumidor.Telefone = (string)reader["Telefone"];
 
-                    
+
                     lista.Add(consumidor);
                 }
             }
@@ -68,11 +68,11 @@ namespace RAS.Data
 
         public Consumidor Read(int id)
         {
-            
+
             Consumidor consumidor = null;
 
             SqlCommand cmd = new SqlCommand();
-            cmd.Connection = base.connectionDB; 
+            cmd.Connection = base.connectionDB;
 
             cmd.CommandText = @"SELECT * FROM v_consumidores where id = @id";
 
@@ -84,15 +84,48 @@ namespace RAS.Data
             {
                 consumidor = new Consumidor
                 {
-                    Pessoas_id      = (int)reader["Id"],
-                    Nome            = (string)reader["Cliente"],
-                    Cpf             = (string)reader["CPF"],
-                    DataNascimento  = (DateTime)reader["Data_Nascimento"],
-                    Email           = (string)reader["Email"],
-                    Sexo            = (string)reader["Sexo"],
-                    Telefone        = (string)reader["Telefone"],
-                    FaixaEtaria     = (int)reader["Idade"],
-                    Status          = (int)reader["Situacao"],
+                    Pessoas_id = (int)reader["Id"],
+                    Nome = (string)reader["Cliente"],
+                    Cpf = (string)reader["CPF"],
+                    DataNascimento = (DateTime)reader["Data_Nascimento"],
+                    Email = (string)reader["Email"],
+                    Sexo = (string)reader["Sexo"],
+                    Telefone = (string)reader["Telefone"],
+                    FaixaEtaria = (int)reader["Idade"],
+                    Status = (int)reader["Situacao"],
+                };
+            }
+
+            return consumidor;
+        }
+
+        public Consumidor Read(string cpf)
+        {
+
+            Consumidor consumidor = null;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = base.connectionDB;
+
+            cmd.CommandText = @"SELECT * FROM v_consumidores where cpf = @cpf";
+
+            cmd.Parameters.AddWithValue("@cpf", cpf);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                consumidor = new Consumidor
+                {
+                    Pessoas_id = (int)reader["Id"],
+                    Nome = (string)reader["Cliente"],
+                    Cpf = (string)reader["CPF"],
+                    DataNascimento = (DateTime)reader["Data_Nascimento"],
+                    Email = (string)reader["Email"],
+                    Sexo = (string)reader["Sexo"],
+                    Telefone = (string)reader["Telefone"],
+                    FaixaEtaria = (int)reader["Idade"],
+                    Status = (int)reader["Situacao"],
                 };
             }
 
@@ -101,7 +134,7 @@ namespace RAS.Data
 
         public void Update(Consumidor consumidor)
         {
-            
+
             SqlCommand cmd = new SqlCommand();
 
             cmd.Connection = base.connectionDB;
@@ -123,11 +156,11 @@ namespace RAS.Data
             cmd.ExecuteNonQuery();
         }
 
-         public void Delete(int id)
+        public void Delete(int id)
         {
-            
+
             SqlCommand cmd = new SqlCommand();
-            
+
             cmd.Connection = base.connectionDB;
 
             cmd.CommandText = @"exec del_Consumidor @id";

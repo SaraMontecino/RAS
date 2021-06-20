@@ -15,6 +15,7 @@ namespace RAS.Data
                 //string de conexão com o Banco de Dados
                 string strConexao = "Data Source = DESKTOP-RQAQ2G0; " +
                     "Initial Catalog = RAS13;" +
+                    "MultipleActiveResultSets=true;" +
                     " Integrated Security = true;";
 
                 connectionDB = new SqlConnection(strConexao);

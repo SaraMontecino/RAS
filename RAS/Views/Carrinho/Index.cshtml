@@ -3,21 +3,24 @@
 @using System.Text.Json
 
 
-@model List<Produto_Pedido>
+@model CarrinhoViewModel
 
 @{
 
     string json = HttpContextAccessor.HttpContext.Session.GetString("user");
     Consumidor user = JsonSerializer.Deserialize<Consumidor>(json);
 
-    List<Produto_Pedido> itens = Model.ToList();
+    string cpf = HttpContextAccessor.HttpContext.Session.GetString("cpf");
+
+
+    List<Produto_Pedido> itens = ViewBag.lista;
     //salvar os itens na sessao
     HttpContextAccessor.HttpContext.Session.SetString("itens", JsonSerializer.Serialize<List<Produto_Pedido>>(itens));
 
 }
 
 
-@if (Model.Count == 0)
+@if (ViewBag.lista.Count == 0)
 {
     <div class="container-fluid mt-100">
         <div class="row">
@@ -56,7 +59,7 @@ else
                                 <th>Quantidade</th>
                                 <th>Total</th>
                             </tr>
-                            @foreach (var item in Model)
+                            @foreach (var item in ViewBag.lista)
                             {
                                 <tr>
                                     <td>@item.Produto.Descricao</td>
@@ -73,11 +76,15 @@ else
                     </div>
                 </div>
                 <div>
-                    <div style="position: absolute; width: 45%; margin-top: 5px; display: flex;">
-                        <input style="flex: 1;" class="form-control float-left">
-                        <button class="btn btn-primary">OK</button>
-                    </div>
-                    <a href="/produto/index" class="btn btn-info cart-btn-transform mt-2 float-right m-2"
+                    <form asp-controller="Carrinho" asp-action="VincularCpf" method="POST">
+                        <div style="position: absolute; width: 45%; margin-top: 5px; display: flex;">
+                            <input value="@cpf" asp-for="Cpf" style="flex: 1;" placeholder="CPF"
+                            class="form-control float-left">
+                            <button class="btn btn-primary">OK</button>
+                        </div>
+                    </form>
+
+                    <a href="/produto_pedido/index" class="btn btn-info cart-btn-transform mt-2 float-right m-2"
                     data-abc="true">Continuar
                         Comprando</a>
 

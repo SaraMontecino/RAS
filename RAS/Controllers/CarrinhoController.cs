@@ -24,9 +24,23 @@ namespace RAS.Controllers
                 //TODO Converter String para Lista(Json)
                 lista = System.Text.Json.JsonSerializer.Deserialize<List<Produto_Pedido>>(carrinho);
             }
+            ViewBag.lista = lista;
+            return View();
+        }
 
-            return View(lista);
+        public IActionResult VincularCpf(string cpf)
+        {
+            HttpContext.Session.SetString("cpf", cpf);
+            List<Produto_Pedido> lista = new List<Produto_Pedido>();
 
+            var carrinho = HttpContext.Session.GetString("Carrinho");
+
+            if (carrinho != null)
+            {
+                //TODO Converter String para Lista(Json)
+                lista = System.Text.Json.JsonSerializer.Deserialize<List<Produto_Pedido>>(carrinho);
+            }
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
