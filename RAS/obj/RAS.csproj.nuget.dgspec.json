@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guilh\\Desktop\\Facul\\ras\\RAS\\RAS\\RAS.csproj": {}
+    "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guilh\\Desktop\\Facul\\ras\\RAS\\RAS\\RAS.csproj": {
+    "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guilh\\Desktop\\Facul\\ras\\RAS\\RAS\\RAS.csproj",
+        "projectUniqueName": "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj",
         "projectName": "RAS",
-        "projectPath": "C:\\Users\\guilh\\Desktop\\Facul\\ras\\RAS\\RAS\\RAS.csproj",
-        "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guilh\\Desktop\\Facul\\ras\\RAS\\RAS\\obj\\",
+        "projectPath": "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\RAS.csproj",
+        "packagesPath": "C:\\Users\\sara_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sara_\\Desktop\\FATEC\\4° Semeste\\INTER\\RAS\\RAS\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\guilh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sara_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "System.Data.SqlClient": {
               "target": "Package",
@@ -64,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
